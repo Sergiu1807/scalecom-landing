@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ScalEcom · Nu mai rămâi fără reclame</title>
+<meta name="description" content="Sistemul care îți ține stocul de unghiuri plin: 20 de reclame video în primele 30 de zile, scoase din ce a mers deja în contul tău și la concurența ta. Pentru magazine de cash on delivery care rulează pe Meta.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://scalecom.ro/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ScalEcom · Nu mai rămâi fără reclame">
+<meta property="og:description" content="20 de reclame video în primele 30 de zile, din ce a mers deja în contul tău. Pentru magazine COD care rulează pe Meta.">
+<meta property="og:url" content="https://scalecom.ro/">
+<meta property="og:image" content="https://scalecom.ro/assets/og.png">
+<meta property="og:locale" content="ro_RO">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon-180.png">
+<meta name="theme-color" content="#F5F3EE">
+<script src="https://assets.mediadelivery.net/playerjs/player-0.1.0.min.js"></script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1062639993067778');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1062639993067778&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* ============================================================
+   ScalEcom — landing v3 · structura StudioFlow/ecom:
+   headline → VSL → buton → case study → vezi dacă te califici +
+   formular → reclame făcute cu sistemul → FAQ → buton → final
+   Tokens: Brand ScalEcom/README — Specificații brand.md
+   ============================================================ */
+:root{
+  --hartie:#F5F3EE; --hartie-2:#ECE9E2; --hartie-3:#E1DDD3; --alb:#FFFFFF;
+  --cerneala:#14161A; --cerneala-2:#5B6068; --cerneala-3:#8A8F97;
+  --linie:rgba(20,22,26,.18); --linie-2:rgba(20,22,26,.09);
+  --fereastra:#1A1D21; --fereastra-2:#23272D; --fer-text:#F5F3EE; --fer-mut:#9AA0A8; --fer-linie:rgba(245,243,238,.14);
+  --accent:#C9F24D;
+  --sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono","SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  --w:940px; --pad:clamp(20px,5vw,56px); --r:4px;
+  --fs:clamp(17px,calc(16px + .25vw),19px);
+  --gap:clamp(56px,7vw,100px);
+}
+html{scroll-behavior:smooth;color-scheme:light}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--hartie);color:var(--cerneala);font-family:var(--sans);font-size:var(--fs);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.025em;text-wrap:balance}
+h1{font-size:clamp(38px,calc(12px + 3.7vw),64px);line-height:1.1;letter-spacing:-.02em}
+h2{font-size:clamp(28px,calc(18px + 2vw),46px);line-height:1.08;letter-spacing:-.02em}
+p{margin:0}
+a{color:inherit}
+.lead{font-size:clamp(18px,calc(16px + .5vw),22px);line-height:1.45}
+.mut{color:var(--cerneala-2)}
+.eyebrow{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--cerneala-2)}
+.hl{position:relative;display:inline-block;z-index:0;padding:0 .08em;margin:0 -.02em}
+.hl::before{content:"";position:absolute;left:0;right:0;top:.16em;bottom:.02em;background:var(--accent);border-radius:.18em .1em .2em .12em;z-index:-1}
+.ul{box-shadow:inset 0 -.18em 0 var(--accent);padding:0 .06em;margin:0 -.06em}
+.in{max-width:var(--w);margin:0 auto;padding:0 var(--pad)}
+.blk{padding-top:var(--gap)}
+.head{display:grid;gap:14px;justify-items:center;text-align:center;max-width:780px;margin:0 auto clamp(22px,3vw,36px)}
+.head .mut{max-width:60ch}
+.defs{position:absolute;width:0;height:0;overflow:hidden}
+.wm{display:block;height:22px;width:122px;color:var(--cerneala)}
+
+/* butoane — mono, majuscule, ca la StudioFlow */
+.btn{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:var(--cerneala);color:var(--hartie);border:1px solid var(--cerneala);border-radius:var(--r);padding:17px 30px;text-decoration:none;cursor:pointer;transition:background .15s,color .15s}
+.btn .t{font:600 15px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.btn .s{font:400 12px/1 var(--mono);letter-spacing:.04em;opacity:.75}
+.btn:hover{background:var(--hartie);color:var(--cerneala)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--cerneala);outline-offset:3px}
+.btn-sm{padding:10px 14px}.btn-sm .t{font-size:12px}
+.btn[disabled]{opacity:.55;cursor:default}
+.btn-acc{background:var(--accent);color:var(--cerneala);border-color:var(--accent)}
+.btn-acc:hover{background:var(--hartie);color:var(--cerneala);border-color:var(--hartie)}
+.cta{display:grid;gap:14px;justify-items:center;text-align:center}
+.cta-note{max-width:46ch;font-size:15px;line-height:1.45;color:var(--cerneala-2)}
+
+/* bara de sus */
+.top{position:sticky;top:0;z-index:20;background:var(--hartie);border-bottom:1px solid var(--linie)}
+.top .in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+@media (max-width:640px){.top .in{height:56px}.wm{height:19px;width:105px}}
+
+/* hero */
+.hero{padding-top:clamp(40px,6vw,80px)}
+.hero .head{margin-bottom:clamp(24px,3.5vw,44px);max-width:860px}
+.hero h1{max-width:820px}
+.hero .lead{max-width:58ch;color:var(--cerneala-2)}
+.vsl{position:relative;aspect-ratio:16/9;background:var(--fereastra);color:var(--fer-text);border-radius:6px;overflow:hidden;border:1px solid var(--fer-linie);margin:0 auto clamp(22px,3vw,32px);max-width:810px}
+.vsl iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vsl-tag,.vsl-sound{position:absolute;top:16px;font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--fer-mut)}
+.vsl-tag{left:18px}.vsl-sound{right:18px}
+.vsl-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:clamp(64px,8vw,88px);height:clamp(64px,8vw,88px);border-radius:50%;background:var(--hartie);border:0;cursor:pointer;display:grid;place-items:center;transition:transform .15s}
+.vsl-play:hover{transform:translate(-50%,-50%) scale(1.06)}
+.vsl-play svg{width:34%;height:34%;margin-left:8%;fill:var(--cerneala)}
+.vsl-copy{position:absolute;left:18px;right:18px;bottom:18px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.vsl-copy .big{font-family:var(--mono);font-weight:600;font-size:clamp(30px,5.5vw,64px);line-height:1;letter-spacing:-.03em}
+.vsl-copy .vs{font-family:var(--mono);font-size:clamp(13px,1.8vw,20px);color:var(--fer-mut)}
+.vsl-copy p{flex-basis:100%;font-size:clamp(14px,1.6vw,18px);color:var(--fer-mut)}
+.vsl.no-url .vsl-copy p::after{content:" · VSL_EMBED_URL nu e setat încă.";color:var(--accent)}
+@media (max-width:560px){.vsl-tag,.vsl-sound{font-size:10px;top:12px}.vsl-copy p{display:none}}
+
+/* case study — tabelul din Ads Manager */
+.am{background:var(--alb);border:1px solid var(--linie);border-radius:8px;overflow:hidden;position:relative}
+.am-img{display:block;width:100%;height:auto}
+.am-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.am table{border-collapse:collapse;width:100%;min-width:860px;font:400 14px/1.35 var(--sans);color:#1c2b33}
+.am th{font-weight:600;text-align:left;padding:14px 12px;border-bottom:1px solid #dadde1;border-right:1px solid #e4e6ea;background:#fff;vertical-align:top;white-space:nowrap}
+.am th .srt{color:#8a8d91;font-weight:400;margin-left:4px}
+.am td{padding:12px;border-bottom:1px solid #e4e6ea;border-right:1px solid #eef0f2;vertical-align:top;font-variant-numeric:tabular-nums}
+.am td.num{text-align:right;text-decoration:underline dotted #8a8d91;text-underline-offset:3px}
+.am td.plain{text-decoration:none}
+.am td .sub{display:block;font-size:12px;color:#606770;text-decoration:none;margin-top:3px}
+.am tbody tr:nth-child(2) td{background:#f5f6f7}
+.am tr.tot td{border-bottom:0;background:#fff}
+.am .chk{width:16px;height:16px;border:1px solid #bcc0c4;border-radius:3px;display:inline-block;vertical-align:middle}
+.am .tog{width:32px;height:18px;border-radius:9px;background:#1877f2;display:inline-block;position:relative;vertical-align:middle}
+.am .tog::after{content:"";position:absolute;right:2px;top:2px;width:14px;height:14px;border-radius:50%;background:#fff}
+.am .adcell{display:flex;align-items:center;gap:10px}
+.am .thumb{width:40px;height:40px;border-radius:4px;background:#8d7b70;filter:blur(3px);flex:none}
+.am .name{width:110px;height:10px;border-radius:5px;background:#c8ccd0;filter:blur(3px)}
+.am .info{display:inline-block;width:14px;height:14px;border-radius:50%;background:#1c2b33;color:#fff;font:700 10px/14px var(--sans);text-align:center;margin-left:6px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(20px,3vw,30px);border-top:1px solid var(--cerneala);border-bottom:1px solid var(--linie-2)}
+.stat{display:grid;gap:6px;padding:18px 16px 18px 0;border-right:1px solid var(--linie-2)}
+.stat + .stat{padding-left:16px}
+.stat:last-child{border-right:0}
+.stat .v{font-family:var(--mono);font-weight:600;font-size:clamp(22px,2.8vw,32px);letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums;white-space:nowrap}
+.stat .l{font-size:13px;line-height:1.4;color:var(--cerneala-2)}
+.cap{text-align:center;font-size:15px;line-height:1.5;color:var(--cerneala-2);max-width:62ch;margin:clamp(18px,3vw,26px) auto 0}
+.honest{text-align:center;font-family:var(--mono);font-size:12.5px;line-height:1.55;color:var(--cerneala-3);max-width:60ch;margin:10px auto 0}
+@media (max-width:760px){.stats{grid-template-columns:1fr 1fr}.stat{border-right:0;border-bottom:1px solid var(--linie-2)}.stat + .stat{padding-left:0}.stat:nth-child(odd){padding-right:16px;border-right:1px solid var(--linie-2)}.stat:nth-child(even){padding-left:16px}.stat:nth-last-child(-n+2){border-bottom:0}}
+
+/* vezi dacă te califici + formular */
+.notdo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(20px,3vw,40px);max-width:760px;margin:0 auto clamp(28px,4vw,44px)}
+.notdo p{position:relative;padding:12px 0 12px 24px;border-top:1px solid var(--linie-2);font-size:15.5px;line-height:1.45}
+.notdo p::before{content:"–";position:absolute;left:2px;top:12px;font-family:var(--mono);font-weight:600;color:var(--cerneala-2)}
+.notdo p b{font-weight:500}
+@media (max-width:640px){.notdo{grid-template-columns:1fr}}
+.card{background:var(--fereastra);color:var(--fer-text);border:1px solid var(--fer-linie);border-radius:8px;overflow:hidden}
+.card-bar{display:flex;gap:22px;justify-content:center;padding:12px 18px;border-bottom:1px solid var(--linie-2);font:500 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--cerneala-3)}
+.card-bar .on{color:var(--cerneala);display:inline-flex;align-items:center;gap:8px}
+.card-bar .on::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.card-body{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.card-l{padding:clamp(22px,3.5vw,36px);border-right:1px solid var(--fer-linie);display:grid;gap:14px;align-content:start;background:var(--fereastra-2)}
+.card-l h3{font-size:clamp(20px,calc(18px + .5vw),24px);letter-spacing:-.02em}
+.card-l p:not(.eyebrow){font-size:15.5px;line-height:1.5;color:var(--fer-mut)}
+.card-l p b{color:var(--fer-text);font-weight:500}
+.card-r{padding:clamp(22px,3.5vw,36px)}
+@media (max-width:820px){.card-body{grid-template-columns:1fr}.card-l{border-right:0;border-bottom:1px solid var(--fer-linie)}}
+form{display:grid;gap:18px;position:relative}
+.f-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.field{display:grid;gap:6px}
+.field label,.q-label{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--fer-mut)}
+.field input{font:400 16px/1.3 var(--sans);color:var(--fer-text);background:var(--fereastra-2);border:1px solid rgba(245,243,238,.22);border-radius:var(--r);padding:13px 14px;width:100%;transition:border-color .15s}
+.field input::placeholder{color:var(--fer-mut)}
+.field input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.q{display:grid;gap:9px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chips label{position:relative;cursor:pointer}
+.chips input{position:absolute;opacity:0;width:1px;height:1px}
+.chips span{display:inline-block;font:500 13px/1 var(--mono);padding:10px 12px;border:1px solid rgba(245,243,238,.3);border-radius:999px;background:transparent;color:var(--fer-text);transition:background .12s,color .12s,border-color .12s;white-space:nowrap}
+.chips label:hover span{border-color:rgba(245,243,238,.6)}
+.chips input:checked + span{background:var(--accent);color:var(--cerneala);border-color:var(--accent)}
+.chips input:focus-visible + span{outline:2px solid var(--accent);outline-offset:2px}
+.f-foot{display:grid;gap:10px;padding-top:4px}
+.f-foot .btn{width:100%}
+.f-note{font-family:var(--mono);font-size:11.5px;line-height:1.5;color:var(--cerneala-3)}
+.f-note a{color:var(--cerneala-2)}
+.f-msg{font-size:14px;color:var(--fer-mut);min-height:1.2em}
+.done{display:grid;gap:10px;padding:clamp(22px,3.5vw,36px)}
+.done .lead{font-weight:500;color:var(--fer-text)}
+.done .mut{color:var(--fer-mut)}
+@media (max-width:560px){.f-grid{grid-template-columns:1fr}}
+
+/* reclame făcute cu sistemul — playere ca native */
+.ads{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,2vw,18px);max-width:740px;margin:0 auto}
+.ad{position:relative;aspect-ratio:9/16;background:var(--fereastra);border:1px solid var(--fer-linie);border-radius:6px;overflow:hidden}
+.ad video,.ad iframe{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0}
+.ad .still{position:absolute;inset:0;background:var(--fereastra-2)}
+.ad .still::after{content:"";position:absolute;left:50%;top:38%;width:38%;aspect-ratio:1;border-radius:50%;background:var(--fereastra);transform:translate(-50%,-50%);opacity:.9}
+.ad .pl{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:56px;height:56px;border-radius:50%;background:var(--hartie);display:grid;place-items:center}
+.ad .pl svg{width:18px;height:18px;margin-left:3px;fill:var(--cerneala)}
+.ad .ctrl{position:absolute;left:0;right:0;bottom:0;padding:10px 12px 12px;display:grid;gap:8px}
+.ad .ctrl .row{display:flex;align-items:center;gap:14px;color:var(--fer-text);opacity:.9}
+.ad .ctrl svg{width:14px;height:14px;fill:currentColor}
+.ad .ctrl .sp{flex:1}
+.ad .bar{height:3px;border-radius:2px;background:rgba(245,243,238,.28);position:relative}
+.ad .bar::after{content:"";position:absolute;left:0;top:0;bottom:0;width:22%;border-radius:2px;background:var(--fer-text)}
+.ad .tag{position:absolute;top:12px;left:12px;font:500 10px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--fer-mut);background:rgba(20,22,26,.6);padding:6px 8px;border-radius:999px}
+@media (max-width:560px){.ads{grid-template-columns:repeat(2,minmax(0,1fr))}.ads .ad:nth-child(3){grid-column:1/-1;max-width:calc(50% - 7px);margin:0 auto;width:100%}}
+
+/* FAQ — carduri ca la StudioFlow */
+.faq{display:grid;gap:12px;max-width:var(--w);margin:0 auto}
+.faq details{background:var(--hartie-2);border:1px solid var(--linie-2);border-radius:8px}
+.faq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr 28px;gap:16px;align-items:center;padding:24px 28px;font-size:clamp(18px,calc(16px + .6vw),24px);font-weight:500;letter-spacing:-.015em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";width:9px;height:9px;border-right:1.5px solid var(--cerneala-2);border-bottom:1.5px solid var(--cerneala-2);transform:rotate(45deg);margin:0 auto 4px;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(225deg);margin-bottom:-4px}
+.faq .a{padding:0 28px 26px;font-size:16px;line-height:1.55;color:var(--cerneala-2);max-width:70ch}
+.faq .a b{color:var(--cerneala);font-weight:500}
+
+/* final */
+.final{padding-top:var(--gap)}
+.foot{margin-top:clamp(48px,6vw,80px);border-top:1px solid var(--linie);padding:clamp(24px,3.5vw,36px) 0 calc(clamp(24px,3.5vw,36px) + 72px)}
+.foot .in{display:grid;gap:18px;justify-items:center;text-align:center}
+.foot-legal{display:grid;gap:8px;font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--cerneala-3);max-width:90ch}
+.foot-links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+.foot-links a{text-decoration:none;border-bottom:1px solid var(--linie)}
+@media (min-width:769px){.foot{padding-bottom:clamp(24px,3.5vw,36px)}}
+.ph{font-family:var(--mono);font-weight:500;color:var(--cerneala-3);border:1px dashed var(--linie);border-radius:3px;padding:0 .35em}
+
+/* buton lipicios (mobil) */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px var(--pad) calc(10px + env(safe-area-inset-bottom));background:var(--hartie);border-top:1px solid var(--linie);transform:translateY(110%);transition:transform .25s}
+.sticky.on{transform:none}
+.sticky .btn{width:100%}
+@media (min-width:769px){.sticky{display:none}}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+</style>
+
+<svg class="defs" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="wm" viewBox="-11 -11 2947 531"><g fill="currentColor"><path d="M0 0 C1 -0 1.9 -0 2.9 -0 C3.9 -0 5 0 6 0 C7.1 0 8.1 0 9.2 0 C11.5 0 13.7 0 15.9 0 C19.4 0.1 22.8 0.1 26.3 0.1 C28.4 0.1 30.6 0.1 32.8 0.1 C33.3 0.1 33.3 0.1 35.9 0.1 C36.9 0.1 37.8 0.1 38.8 0.1 C39.6 0.1 40.5 0.1 41.3 0.1 C43.3 0.2 43.3 0.2 44.3 1.2 C44.4 3.4 44.4 5.5 44.4 7.6 C44.4 8.3 44.4 9 44.4 9.7 C44.4 12 44.4 14.3 44.4 16.6 C44.4 18.3 44.4 19.9 44.4 21.6 C44.4 26.2 44.4 30.8 44.4 35.3 C44.4 40.3 44.4 45.2 44.4 50.1 C44.4 59.8 44.4 69.5 44.4 79.1 C44.4 87 44.4 94.8 44.4 102.7 C44.4 103.8 44.4 104.9 44.4 106.1 C44.4 108.3 44.4 110.6 44.4 112.9 C44.4 133.5 44.4 154.2 44.4 174.8 C44.4 193.7 44.4 212.6 44.4 231.5 C44.4 252.7 44.4 273.8 44.4 295 C44.4 297.3 44.4 299.6 44.4 301.8 C44.4 302.4 44.4 302.4 44.4 305.2 C44.4 313 44.4 320.9 44.4 328.7 C44.4 338.3 44.4 347.8 44.4 357.4 C44.4 362.3 44.4 367.2 44.4 372 C44.4 376.5 44.4 381 44.4 385.4 C44.4 387 44.4 388.7 44.4 390.3 C44.4 392.5 44.4 394.7 44.4 396.8 C44.4 397.5 44.4 398.1 44.4 398.8 C44.4 403.1 44.4 403.1 43.3 404.2 C41.7 404.3 40.1 404.4 38.6 404.4 C37.6 404.4 36.6 404.4 35.6 404.4 C34.5 404.4 33.4 404.4 32.3 404.4 C31.2 404.4 30.1 404.4 28.9 404.4 C26.6 404.4 24.2 404.4 21.9 404.4 C18.9 404.4 15.9 404.4 12.9 404.4 C10 404.4 7.1 404.4 4.3 404.4 C3.2 404.4 2.1 404.4 1 404.4 C-0 404.4 -1 404.4 -2 404.4 C-2.9 404.4 -3.8 404.4 -4.7 404.4 C-6.7 404.2 -6.7 404.2 -7.7 403.2 C-7.8 401.1 -7.9 399 -7.9 396.9 C-7.9 396.2 -7.9 395.5 -7.9 394.8 C-7.9 392.5 -7.9 390.2 -7.9 387.9 C-7.9 386.3 -7.9 384.6 -7.9 383 C-7.9 378.4 -7.9 373.8 -7.9 369.3 C-7.9 364.3 -7.9 359.4 -7.9 354.5 C-7.9 343.8 -7.9 333 -7.9 322.2 C-7.9 315.5 -7.9 308.8 -7.9 302.1 C-8 283.5 -8 265 -8 246.4 C-8 245.2 -8 244 -8 242.8 C-8 241.6 -8 240.4 -8 239.2 C-8 236.8 -8 234.4 -8 232 C-8 231.7 -8 231.7 -8 230.1 C-8 210.7 -8 191.3 -8 171.9 C-8 151.3 -8.1 130.8 -8.1 110.3 C-8.1 99.1 -8.1 87.9 -8.1 76.7 C-8.1 67.2 -8.1 57.6 -8.1 48.1 C-8.1 43.2 -8.1 38.4 -8.1 33.5 C-8.1 29 -8.1 24.6 -8.1 20.1 C-8.1 18.5 -8.1 16.9 -8.1 15.3 C-8.1 13.1 -8.1 10.9 -8.1 8.7 C-8.1 8.1 -8.1 7.5 -8.1 6.8 C-8.1 2.6 -8.1 2.6 -6.3 0.9 C-4.2 0 -2.3 -0 0 0 Z " transform="translate(1179.7,49.8)"/>
+<path d="M0 0 C0.6 0 1.3 0 2 0 C2.6 0 3.3 0 4 0 C5.4 0 6.8 0 8.2 0 C10.3 0 12.5 0 14.6 0 C16 0 17.4 0 18.7 0 C19.4 0 20 0 20.7 0 C25.2 0 25.2 0 26.3 1.1 C27.6 1.3 28.9 1.4 30.1 1.4 C30.9 1.5 31.6 1.5 32.4 1.5 C33.2 1.6 34 1.6 34.8 1.6 C36.4 1.7 38 1.8 39.6 1.9 C40.3 1.9 41 1.9 41.7 1.9 C43.3 2.1 43.3 2.1 44.3 3.1 C46.2 3.3 48 3.5 49.8 3.6 C55.2 4 55.2 4 56.3 5.1 C57.5 5.3 58.7 5.5 59.8 5.6 C63.2 6 63.2 6 64.3 7.1 C64.9 7.2 64.9 7.2 67.5 7.5 C70.8 7.9 73.4 8.9 76.4 10.3 C78.4 11.2 80.4 11.8 82.5 12.5 C87.3 14 91.5 16.1 95.9 18.5 C96.6 18.8 97.4 19.2 98.1 19.7 C102.7 22.1 106.9 24.7 110.8 27.9 C112.3 29.1 112.3 29.1 115 30.6 C120.1 33.9 123.3 38 126.3 43.1 C127.5 44.4 128.8 45.6 130.1 46.7 C133.4 50.4 135.5 55.2 137.9 59.6 C138.1 59.9 138.1 59.9 138.8 61.2 C141.4 65.9 143.3 70.6 143.9 76 C144.3 79.1 144.3 79.1 145.3 80.1 C145.4 82.7 145.5 85.1 145.5 87.6 C145.5 88.3 145.5 89 145.5 89.8 C145.5 95 145.5 95 144.3 96.1 C142.8 96.2 141.2 96.3 139.7 96.3 C139.2 96.3 139.2 96.3 136.7 96.3 C135.6 96.3 134.5 96.3 133.4 96.3 C132.9 96.3 132.9 96.3 130.1 96.3 C127.7 96.3 125.4 96.3 123.1 96.3 C120.1 96.3 117.1 96.3 114.1 96.4 C111.2 96.4 108.4 96.4 105.5 96.4 C105 96.4 105 96.4 102.3 96.4 C101.3 96.4 100.3 96.4 99.3 96.4 C98.8 96.4 98.8 96.4 96.6 96.4 C94.2 96.1 93.1 95.7 91.3 94.1 C91 92.3 91 92.3 90.9 90.1 C90.4 83.4 88.4 76.8 83.3 72.1 C82.9 71.3 82.4 70.5 81.9 69.7 C79.1 65.2 75.9 62.8 71.3 60.1 C70.8 59.8 70.3 59.6 69.8 59.3 C68.2 58.3 66.6 57.4 65 56.5 C64.4 56.2 63.9 55.9 63.3 55.6 C59.3 53.3 55.9 52.7 51.3 52.1 C49.4 51.4 49.4 51.4 48 50.6 C44.4 49 41 48.6 37.2 48.4 C35.3 48.1 35.3 48.1 34.3 47.1 C32.8 47 31.3 47 29.8 47 C28.9 47 27.9 47 26.9 47 C25.9 47 24.8 47 23.8 47 C22.7 47 21.7 47 20.6 47 C18.3 47 16.1 47 13.8 47 C10.4 47 6.9 47 3.4 47 C1.3 47 -0.9 47 -3.1 47 C-4.1 47 -5.2 47 -6.3 47 C-6.7 47 -6.7 47 -9.2 47 C-10 47 -10.9 47 -11.7 47 C-13.7 47.1 -13.7 47.1 -14.7 48.1 C-17 48.5 -19.3 48.7 -21.6 48.9 C-23.7 49.1 -23.7 49.1 -24.7 50.1 C-25.7 50.3 -26.7 50.4 -27.8 50.5 C-31.1 50.9 -33.7 51.9 -36.8 53.3 C-39.6 54.6 -42.6 55.4 -45.6 56.3 C-47.9 57.2 -49 58.4 -50.7 60.1 C-51.4 60.5 -52.1 60.9 -52.8 61.3 C-60.4 66.2 -65.7 72.3 -67.7 81.1 C-68.5 88.3 -68.8 95.9 -64.7 102.1 C-64.2 102.8 -63.8 103.5 -63.3 104.2 C-58.3 111.4 -53.2 114.1 -45.1 117.2 C-43 118 -41 118.9 -39 119.8 C-35.6 121.3 -32.3 121.7 -28.7 122.1 C-28.3 122.5 -28 122.8 -27.7 123.1 C-26.2 123.3 -24.7 123.5 -23.2 123.6 C-18.8 124 -18.8 124 -17.7 125.1 C-15.5 125.3 -13.3 125.5 -11.2 125.6 C-4.8 126 -4.8 126 -3.7 127.1 C-1.5 127.3 0.7 127.5 2.8 127.6 C9.2 128 9.2 128 10.3 129.1 C12.5 129.3 14.7 129.5 16.8 129.6 C23.2 130 23.2 130 24.3 131.1 C26.5 131.3 28.7 131.5 30.8 131.6 C37.2 132 37.2 132 38.3 133.1 C40.2 133.3 42 133.5 43.8 133.6 C49.2 134 49.2 134 50.3 135.1 C51.8 135.3 53.3 135.5 54.8 135.6 C59.2 136 59.2 136 60.3 137.1 C61.8 137.3 63.3 137.5 64.8 137.6 C69.2 138 69.2 138 70.3 139.1 C71.5 139.3 72.7 139.5 73.8 139.6 C77.2 140 77.2 140 78.3 141.1 C79.5 141.3 80.7 141.5 81.8 141.6 C85.2 142 85.2 142 86.3 143.1 C86.8 143.2 86.8 143.2 89.3 143.5 C106.3 145.8 123.2 158 135.2 169.7 C135.7 170.3 136.3 170.8 136.9 171.4 C139.9 174.4 142.3 177.3 144.3 181.1 C144.8 181.9 145.2 182.6 145.7 183.3 C148.5 188.1 149.9 191.7 150.3 197.1 C150.7 197.5 151 197.8 151.3 198.1 C151.7 199.9 151.8 201.7 152.1 203.5 C152.3 205.1 152.3 205.1 153.3 206.1 C153.4 208.1 153.5 210 153.5 211.9 C153.5 212.2 153.5 212.2 153.5 213.6 C153.5 214.8 153.5 216.1 153.5 217.3 C153.5 219.1 153.5 221 153.5 222.9 C153.5 224 153.5 225.2 153.5 226.4 C153.5 227.5 153.5 228.5 153.5 229.7 C153.3 232.1 153.3 232.1 152.3 233.1 C152.2 234.5 152.1 235.9 152 237.3 C151.6 241 150.8 243.9 149.2 247.3 C148.2 249.4 147.6 251.5 146.9 253.7 C145.6 257.8 143.9 260.7 141.3 264.1 C140.6 265.2 140 266.3 139.3 267.3 C137.7 269.6 136.3 271.2 134.3 273.1 C133.9 273.9 133.6 274.7 133.2 275.5 C131 278.7 128.4 280.5 125.2 282.7 C123.3 284.1 123.3 284.1 121.3 286.3 C118.9 288.6 116.3 289.7 113.3 291.1 C111.3 292.1 111.3 292.1 108.7 294.1 C104.7 296.9 100 298.3 95.5 300 C93.1 300.9 90.7 301.8 88.4 302.8 C84.1 304.6 80.1 306.1 75.5 306.7 C72.3 307.1 72.3 307.1 71.3 308.1 C69 308.5 66.7 308.7 64.4 308.9 C62.3 309.1 62.3 309.1 61.3 310.1 C58.1 310.4 54.9 310.6 51.7 310.7 C46.4 311 46.4 311 45.3 312.1 C43.4 312.2 41.5 312.3 39.5 312.3 C38.9 312.3 38.3 312.3 37.7 312.3 C35.7 312.3 33.7 312.3 31.7 312.3 C30.3 312.3 28.9 312.3 27.6 312.3 C24.6 312.3 21.7 312.3 18.8 312.3 C15.1 312.3 11.4 312.3 7.6 312.3 C4.8 312.3 1.9 312.3 -1 312.3 C-2.3 312.3 -3.7 312.3 -5.1 312.3 C-7 312.3 -8.9 312.3 -10.9 312.3 C-11.4 312.3 -11.4 312.3 -14.2 312.3 C-16.7 312.1 -16.7 312.1 -17.7 311.1 C-19.5 310.9 -21.3 310.8 -23.2 310.6 C-28.6 310.2 -28.6 310.2 -29.7 309.1 C-31.2 308.9 -32.7 308.8 -34.2 308.6 C-38.6 308.2 -38.6 308.2 -39.7 307.1 C-40.8 306.9 -42 306.8 -43.2 306.6 C-46.6 306.2 -46.6 306.2 -47.7 305.1 C-48.6 305 -49.6 304.9 -50.6 304.8 C-55.6 304.2 -60 302.1 -64.7 300.1 C-66.4 299.5 -68.2 298.8 -69.9 298.1 C-73.3 296.8 -76.2 295.3 -79.1 293.2 C-81.1 291.9 -83.2 290.8 -85.3 289.6 C-88.6 287.8 -91 285.9 -93.7 283.1 C-94.4 282.7 -95.1 282.3 -95.9 281.9 C-99.3 279.7 -102 277.1 -104.8 274.3 C-105 274 -105 274 -106.4 272.7 C-109.3 269.7 -111.6 266.9 -113.7 263.1 C-114.3 262.1 -115 261.1 -115.7 260.1 C-116 259.6 -116.3 259.1 -116.7 258.6 C-117.5 257.3 -118.4 256.1 -119.2 254.8 C-120.9 251.8 -121.9 248.7 -122.9 245.4 C-123.6 243.4 -124.4 241.5 -125.3 239.5 C-126.8 236.1 -127.2 232.9 -127.7 229.1 C-128 228.8 -128.3 228.5 -128.7 228.1 C-128.8 225.6 -128.8 223.2 -128.8 220.6 C-128.8 219.9 -128.8 219.2 -128.8 218.5 C-128.8 213.3 -128.8 213.3 -127.7 212.1 C-126 212 -124.4 212 -122.8 212 C-121.8 212 -120.7 212 -119.6 212 C-119.1 212 -119.1 212 -116.2 212 C-115.1 212 -113.9 212 -112.7 212 C-110.3 212 -107.9 212 -105.4 212 C-102.3 212 -99.2 212 -96 212 C-93.1 212 -90.1 212 -87.1 212 C-86 212 -84.8 212 -83.7 212 C-82.6 212 -81.6 212 -80.5 212 C-79.6 212 -78.7 212 -77.7 212 C-75.7 212.1 -75.7 212.1 -74.7 213.1 C-74.3 215.2 -74.2 217.3 -73.9 219.3 C-73.7 221.1 -73.7 221.1 -72.7 222.1 C-72.6 223.1 -72.5 224.1 -72.4 225.1 C-71.4 233 -65.2 242.5 -59.1 247.4 C-57.6 248.4 -56.1 249.3 -54.7 250.1 C-54.2 250.6 -53.8 251.1 -53.3 251.6 C-47.5 257.1 -38.4 259.8 -30.7 261.6 C-28.7 262.1 -28.7 262.1 -27.7 263.1 C-26.5 263.3 -25.3 263.5 -24.2 263.6 C-20.8 264 -20.8 264 -19.7 265.1 C-17.5 265.3 -15.3 265.5 -13.2 265.6 C-6.8 266 -6.8 266 -5.7 267.1 C-4.2 267.2 -2.8 267.3 -1.3 267.3 C-0.4 267.3 0.5 267.3 1.4 267.3 C2.4 267.3 3.4 267.3 4.5 267.3 C5 267.3 5 267.3 7.5 267.3 C9.7 267.3 11.9 267.3 14 267.3 C17.3 267.3 20.6 267.3 23.9 267.3 C26 267.3 28.1 267.3 30.2 267.3 C30.7 267.3 30.7 267.3 33.2 267.3 C34.2 267.3 35.1 267.3 36 267.3 C36.8 267.3 37.6 267.3 38.5 267.3 C40.3 267.1 40.3 267.1 41.3 266.1 C44.2 265.8 47 265.6 49.9 265.4 C52.3 265.1 52.3 265.1 53.3 264.1 C54.4 264 55.4 263.9 56.5 263.8 C59.8 263.3 62.4 262.4 65.4 261 C68.3 259.7 71.3 258.9 74.3 258 C76.6 257 77.7 255.9 79.3 254.1 C80.1 253.7 80.8 253.4 81.5 253 C87.3 249.3 92.2 244.2 95.3 238.1 C95.7 237.8 96 237.5 96.3 237.1 C96.5 236 96.7 234.8 96.8 233.6 C97.2 230.2 97.2 230.2 98.3 229.1 C99.2 219.2 98.6 210.8 92.4 202.6 C84.3 193.6 73.3 187.5 61.3 186.1 C61 185.8 60.7 185.5 60.3 185.1 C58.8 184.9 57.3 184.8 55.8 184.6 C51.4 184.2 51.4 184.2 50.3 183.1 C48.2 182.9 46 182.8 43.8 182.6 C37.5 182.3 37.5 182.3 36.3 181.1 C34.2 180.9 32 180.8 29.8 180.6 C23.5 180.3 23.5 180.3 22.3 179.1 C19.8 178.9 17.3 178.8 14.8 178.6 C7.5 178.3 7.5 178.3 6.3 177.1 C3.8 176.9 1.3 176.8 -1.2 176.6 C-8.5 176.3 -8.5 176.3 -9.7 175.1 C-11.8 174.9 -14 174.8 -16.2 174.6 C-22.5 174.3 -22.5 174.3 -23.7 173.1 C-25.5 172.9 -27.3 172.8 -29.2 172.6 C-34.6 172.2 -34.6 172.2 -35.7 171.1 C-37.5 170.9 -39.3 170.8 -41.2 170.6 C-46.6 170.2 -46.6 170.2 -47.7 169.1 C-48.8 168.9 -50 168.8 -51.2 168.6 C-54.6 168.2 -54.6 168.2 -55.7 167.1 C-56.1 167.1 -56.1 167.1 -58.6 166.8 C-63.6 166.2 -68 164.1 -72.7 162.1 C-74.4 161.5 -76.2 160.8 -77.9 160.1 C-81.9 158.5 -85.2 156.7 -88.7 154.1 C-89.7 153.4 -90.8 152.8 -91.8 152.1 C-94.1 150.5 -95.7 149.1 -97.7 147.1 C-98.4 146.7 -99.2 146.3 -100 145.8 C-107.4 141.1 -111.1 134.2 -115.2 126.7 C-115.5 126.2 -115.8 125.6 -116.1 125 C-118.9 120 -120.8 115.1 -121.2 109.3 C-121.6 105.2 -121.6 105.2 -122.7 104.1 C-122.8 102.2 -122.8 100.3 -122.8 98.4 C-122.8 97.8 -122.8 97.2 -122.8 96.7 C-122.8 95.4 -122.8 94.2 -122.8 93 C-122.8 91.1 -122.8 89.3 -122.8 87.4 C-122.8 86.2 -122.8 85.1 -122.8 83.9 C-122.8 82.8 -122.8 81.7 -122.8 80.6 C-122.7 78.1 -122.7 78.1 -121.7 77.1 C-121.5 75.8 -121.4 74.5 -121.3 73.2 C-119.8 57.9 -109.5 44.9 -99.1 34.3 C-98.5 33.8 -98 33.2 -97.4 32.6 C-94.4 29.6 -91.5 27.2 -87.7 25.1 C-86.7 24.5 -85.7 23.8 -84.7 23.2 C-81.7 21.1 -78.6 19.3 -75.3 17.6 C-74.8 17.3 -74.2 17 -73.6 16.7 C-69.7 14.6 -65.9 13 -61.6 11.8 C-59.7 11.1 -57.9 10.4 -56 9.5 C-52.6 8 -49.4 7.6 -45.7 7.1 C-45.3 6.8 -45 6.5 -44.7 6.1 C-42.9 5.8 -41.1 5.6 -39.3 5.4 C-37.7 5.1 -37.7 5.1 -36.7 4.1 C-34.3 3.8 -32 3.6 -29.7 3.4 C-27.7 3.1 -27.7 3.1 -26.7 2.1 C-25.1 2 -23.6 1.9 -22 1.9 C-21.1 1.8 -20.1 1.8 -19.2 1.7 C-17.2 1.7 -15.2 1.6 -13.2 1.5 C-12.2 1.5 -11.3 1.5 -10.3 1.4 C-9.9 1.4 -9.9 1.4 -7.7 1.3 C-4.9 1.1 -3.1 0 0 0 Z " transform="translate(178.7,147.9)"/>
+<path d="M0 0 C0.6 0 1.2 0 1.8 0 C2.1 0 2.1 0 3.7 0 C5 0 6.3 0 7.6 0 C9.6 0 11.6 0 13.7 0 C14.9 0 16.2 0 17.5 0 C18.1 0 18.7 0 19.3 0 C23.5 0 23.5 0 24.6 1.1 C25.9 1.3 27.2 1.4 28.4 1.4 C29.2 1.5 29.9 1.5 30.7 1.5 C31.5 1.6 32.3 1.6 33.1 1.6 C34.7 1.7 36.3 1.8 37.9 1.9 C38.6 1.9 39.3 1.9 40 1.9 C41.6 2.1 41.6 2.1 42.6 3.1 C44.1 3.3 45.6 3.5 47.1 3.6 C51.5 4 51.5 4 52.6 5.1 C53.8 5.3 55 5.5 56.1 5.6 C59.5 6 59.5 6 60.6 7.1 C61.2 7.2 61.2 7.2 63.8 7.5 C67.1 7.9 69.7 8.9 72.7 10.3 C74.7 11.2 76.7 11.8 78.8 12.5 C83.6 14 88 16.2 92.4 18.6 C93.1 19 93.8 19.4 94.6 19.8 C99.9 22.7 105.1 25.7 110.1 29.1 C111.1 29.8 112.1 30.5 113.2 31.1 C115.8 32.8 118.1 34.5 120.2 36.7 C122.6 39.1 122.6 39.1 124.9 40.4 C128.3 42.6 130.9 45.2 133.8 48 C134 48.3 134 48.3 135.4 49.6 C138.3 52.6 140.6 55.4 142.6 59.1 C143.1 59.6 143.6 60.1 144.1 60.6 C148.1 64.6 150.5 70.5 153.1 75.5 C153.5 76.2 153.8 76.9 154.2 77.6 C155 79.1 155.8 80.5 156.5 82 C157.3 83.4 158.1 84.9 158.9 86.3 C159.2 87 159.6 87.7 160 88.4 C160.3 89 160.7 89.7 161 90.3 C161.8 92.7 161.6 93.9 160.6 96.1 C155.7 98.1 151 98.5 145.8 98.7 C138.8 99 138.8 99 137.6 100.1 C134.4 100.4 131.2 100.6 128 100.7 C122.7 101 122.7 101 121.6 102.1 C110.6 103.4 110.6 103.4 106.8 101 C105.5 99.4 104.6 97.9 103.6 96.1 C103.4 95.7 103.4 95.7 102.1 93.6 C101.6 92.8 101.1 92 100.6 91.1 C97.8 86.5 94.6 82.8 90.7 79 C90.2 78.4 89.7 77.9 89.2 77.4 C86.2 74.4 83.3 72.2 79.6 70.1 C79.4 69.9 79.4 69.9 78.3 68.7 C76.4 66.9 74.7 66.1 72.4 65 C71.6 64.6 70.8 64.2 70 63.8 C69.1 63.4 68.3 63 67.4 62.6 C66.6 62.2 65.7 61.9 64.9 61.5 C62.5 60.3 60.1 59.2 57.6 58.1 C57.3 58 57.3 58 55.7 57.2 C52.1 55.7 48.6 54.5 44.8 53.5 C39.7 52.2 39.7 52.2 38.6 51.1 C37.1 50.9 35.6 50.8 34.1 50.6 C29.8 50.2 29.8 50.2 28.6 49.1 C26.1 49 23.7 49 21.1 49 C20.4 49 19.6 49 18.9 49 C17.3 49 15.7 49 14.1 49 C11.7 49 9.2 49 6.8 49 C5.2 49 3.7 49 2.1 49 C1.4 49 0.7 49 -0.1 49 C-5.2 49 -5.2 49 -6.4 50.1 C-7.7 50.3 -9.1 50.4 -10.5 50.5 C-14.3 50.9 -17.2 51.8 -20.7 53.5 C-22.5 54.2 -24 54.4 -26 54.6 C-29.6 55.2 -31.3 56.2 -34.4 58.1 C-35.8 58.6 -37.3 59.1 -38.8 59.6 C-42.9 60.9 -45.8 62.6 -49.4 65.1 C-50.4 65.8 -51.4 66.5 -52.4 67.1 C-52.8 67.5 -53.3 67.8 -53.8 68.1 C-55.1 69 -56.5 69.8 -57.9 70.6 C-62.5 73.7 -66.3 77.8 -70.2 81.7 C-71.5 83.1 -72.9 84.4 -74.3 85.8 C-75.2 86.7 -76 87.5 -76.9 88.4 C-77.3 88.8 -77.3 88.8 -79.3 90.8 C-81.3 93.1 -82.9 95.4 -84.4 98.1 C-84.6 98.5 -84.6 98.5 -85.6 100.4 C-86 101.1 -86.4 101.8 -86.8 102.6 C-88.2 105.2 -89.7 107.6 -91.5 110 C-93.9 113.5 -94.6 117.4 -95.6 121.5 C-96.2 123.7 -97 125.7 -98 127.8 C-99.6 131.2 -99.9 134.6 -100.1 138.3 C-100.4 140.1 -100.4 140.1 -101.4 141.1 C-101.5 143.5 -101.5 145.8 -101.5 148.2 C-101.5 148.9 -101.5 149.6 -101.5 150.3 C-101.5 151.8 -101.5 153.3 -101.5 154.8 C-101.5 157.1 -101.5 159.4 -101.5 161.7 C-101.5 163.2 -101.5 164.6 -101.5 166.1 C-101.5 166.8 -101.5 167.5 -101.5 168.2 C-101.5 173 -101.5 173 -100.4 174.1 C-100.2 175.5 -100.1 176.9 -100 178.3 C-99.6 182 -98.8 184.9 -97.2 188.3 C-96.3 190.3 -95.7 192.2 -95.1 194.3 C-92.3 203 -87.5 211.2 -81.7 218.4 C-80.4 220.1 -80.4 220.1 -79.1 222.4 C-76.7 226.2 -73.7 229.1 -70.5 232.3 C-69.9 232.9 -69.3 233.5 -68.6 234.1 C-65.4 237.3 -62.4 240 -58.4 242.1 C-57.4 242.8 -56.4 243.4 -55.4 244.1 C-54.9 244.4 -54.4 244.8 -53.9 245.1 C-52.9 245.8 -51.8 246.5 -50.8 247.2 C-49.3 248.2 -47.8 249.2 -46.4 250.1 C-45.6 250.7 -44.8 251.2 -44 251.7 C-41 253.3 -37.9 254.3 -34.6 255.4 C-32.6 256.1 -30.6 256.8 -28.7 257.7 C-23.2 260.1 -18.2 261.4 -12.2 261.9 C-10.4 262.1 -10.4 262.1 -9.4 263.1 C-8 263.2 -6.7 263.3 -5.4 263.3 C-4.6 263.3 -3.7 263.3 -2.9 263.3 C-2 263.3 -1 263.3 -0.1 263.3 C0.8 263.3 1.8 263.3 2.7 263.3 C4.7 263.3 6.6 263.3 8.6 263.3 C11.6 263.3 14.7 263.3 17.7 263.3 C19.6 263.3 21.5 263.3 23.4 263.3 C23.8 263.3 23.8 263.3 26.2 263.3 C27 263.3 27.8 263.3 28.7 263.3 C29.1 263.3 29.1 263.3 30.9 263.3 C32.6 263.1 32.6 263.1 33.6 262.1 C35.4 261.8 37.2 261.6 39 261.4 C40.6 261.1 40.6 261.1 41.6 260.1 C42.7 260 43.8 259.9 44.9 259.8 C48.4 259.3 50.6 258 53.6 256.1 C55 255.7 56.3 255.3 57.6 254.9 C61.7 253.6 65.4 251.8 69.2 249.8 C69.7 249.6 70.2 249.3 70.8 249 C79 244.5 85.6 238.5 92.2 231.8 C93.5 230.6 94.7 229.3 96 228 C96.8 227.2 97.6 226.4 98.5 225.6 C98.8 225.2 98.8 225.2 100.7 223.4 C103.3 220.4 105 217.2 106.9 213.8 C108.9 211.9 109.5 211.9 112.3 211.8 C115.6 212.1 115.6 212.1 116.6 213.1 C118.8 213.3 121 213.5 123.1 213.6 C129.5 214 129.5 214 130.6 215.1 C132.1 215.3 133.6 215.5 135.1 215.6 C139.5 216 139.5 216 140.6 217.1 C142.3 217.3 144 217.4 145.7 217.5 C156.3 218.4 156.3 218.4 159.6 221.1 C160.4 225.5 158.6 228.7 156.5 232.5 C156.4 232.7 156.4 232.7 155.6 234.2 C153.3 238.2 150.8 241.9 147.9 245.5 C146.6 247.1 146.6 247.1 145 250 C143.7 252.1 142.4 253.4 140.6 255.1 C140.3 255.8 139.9 256.5 139.5 257.2 C136.8 261.4 133.3 264.7 129.8 268.3 C129.1 269 128.4 269.7 127.6 270.4 C124.2 273.9 121 276.8 116.6 279.1 C116.1 279.6 115.7 280.1 115.1 280.6 C113.2 282.6 111 283.8 108.6 285.1 C107.8 285.7 106.9 286.3 106 287 C94 295 80.7 301 66.8 304.5 C64.6 305.1 64.6 305.1 63.6 306.1 C61.8 306.5 60 306.6 58.2 306.9 C56.6 307.1 56.6 307.1 55.6 308.1 C53.8 308.5 52 308.6 50.2 308.9 C48.6 309.1 48.6 309.1 47.6 310.1 C44.8 310.5 42 310.7 39.1 310.9 C36.6 311.1 36.6 311.1 35.6 312.1 C34.1 312.2 32.5 312.3 31 312.3 C30 312.3 29 312.3 27.9 312.3 C26.8 312.3 25.8 312.3 24.6 312.3 C24.1 312.3 24.1 312.3 21.3 312.3 C18.9 312.3 16.6 312.3 14.3 312.3 C11.3 312.3 8.2 312.3 5.2 312.3 C2.4 312.3 -0.5 312.3 -3.4 312.3 C-4.4 312.3 -5.5 312.3 -6.6 312.3 C-7.6 312.3 -8.6 312.3 -9.7 312.3 C-10.6 312.3 -11.4 312.3 -12.3 312.3 C-14.4 312.1 -14.4 312.1 -15.4 311.1 C-17.2 310.9 -19 310.8 -20.9 310.6 C-26.2 310.2 -26.2 310.2 -27.4 309.1 C-28.5 308.9 -29.7 308.8 -30.9 308.6 C-34.2 308.2 -34.2 308.2 -35.4 307.1 C-36.4 307 -37.4 306.9 -38.5 306.8 C-41.8 306.3 -44.5 305.4 -47.5 304 C-49.5 303.1 -51.6 302.4 -53.7 301.7 C-67.2 297.3 -67.2 297.3 -72.8 293.2 C-74.7 291.9 -76.7 290.8 -78.7 289.8 C-82.5 287.7 -85.9 285.4 -89.3 282.7 C-90.5 281.8 -91.8 280.8 -93.1 279.9 C-99.2 275.6 -104.4 270.4 -109.6 265.1 C-111.2 263.6 -112.7 262 -114.3 260.5 C-115.3 259.5 -116.3 258.5 -117.3 257.4 C-117.8 257 -118.2 256.5 -118.7 256.1 C-121.4 253.3 -123.5 250.5 -125.4 247.1 C-126 246.2 -126.6 245.2 -127.3 244.2 C-128 243.2 -128.7 242.2 -129.4 241.1 C-130 240.2 -130.6 239.3 -131.3 238.3 C-133.3 235.3 -135.2 232.1 -136.9 228.8 C-137.2 228.3 -137.5 227.7 -137.8 227.1 C-139.9 223.2 -141.5 219.3 -142.7 215 C-143.4 213.1 -143.4 213.1 -145 210.5 C-146.8 207.4 -146.9 204.7 -147.4 201.1 C-147.7 200.8 -148 200.5 -148.4 200.1 C-148.7 198.3 -148.9 196.5 -149.1 194.7 C-149.4 193.1 -149.4 193.1 -150.4 192.1 C-150.7 189.8 -150.9 187.5 -151.1 185.2 C-151.4 183.1 -151.4 183.1 -152.4 182.1 C-152.5 180.9 -152.6 179.6 -152.6 178.4 C-152.7 177.6 -152.7 176.8 -152.8 176.1 C-152.8 174.4 -152.9 172.8 -153 171.2 C-153 170.5 -153 169.7 -153.1 168.9 C-153.1 168.2 -153.1 167.5 -153.2 166.8 C-153.4 165.1 -153.4 165.1 -154.4 164.1 C-154.5 162.6 -154.5 162.6 -154.5 160.6 C-154.5 159.9 -154.5 159.1 -154.5 158.4 C-154.5 157.7 -154.5 156.9 -154.5 156.1 C-154.5 155.4 -154.5 154.6 -154.5 153.9 C-154.5 153.2 -154.5 152.4 -154.5 151.7 C-154.5 151 -154.5 150.4 -154.5 149.7 C-154.4 148.1 -154.4 148.1 -153.4 147.1 C-153.2 145.9 -153.1 144.6 -153.1 143.4 C-153 142.6 -153 141.8 -153 141.1 C-152.9 140.3 -152.9 139.5 -152.9 138.6 C-152.8 137.1 -152.7 135.5 -152.6 133.9 C-152.6 133.2 -152.6 132.5 -152.5 131.8 C-152.4 130.1 -152.4 130.1 -151.4 129.1 C-151.2 127.8 -151.1 126.4 -151 125 C-150.6 121.2 -149.7 118.3 -148 114.8 C-147.3 113 -147.1 111.5 -146.9 109.5 C-146.3 105.9 -145.3 104.2 -143.4 101.1 C-142.9 99.8 -142.4 98.4 -142 97 C-140.5 92.3 -138.4 88 -136 83.6 C-135.6 82.8 -135.3 82.1 -134.8 81.3 C-132.4 76.8 -129.8 72.6 -126.6 68.6 C-125.4 67.1 -125.4 67.1 -123.7 64.3 C-122.4 62.2 -121.1 60.9 -119.4 59.1 C-119 58.5 -118.6 57.8 -118.3 57.1 C-115.5 52.8 -112 49.5 -108.5 46 C-108.1 45.7 -108.1 45.7 -106.3 43.8 C-102.9 40.4 -99.7 37.5 -95.4 35.1 C-94 33.9 -94 33.9 -92.9 32.6 C-87.3 26.5 -77.7 23.1 -70.5 19.2 C-68.6 18.3 -66.8 17.3 -65 16.3 C-59.3 13.4 -54 11.3 -47.8 9.8 C-45.6 9.2 -43.7 8.5 -41.6 7.5 C-38.2 5.9 -35 5.6 -31.4 5.1 C-31 4.8 -30.7 4.5 -30.4 4.1 C-28.6 3.8 -26.8 3.6 -24.9 3.4 C-23.4 3.1 -23.4 3.1 -22.4 2.1 C-21.1 2 -19.8 1.9 -18.6 1.9 C-18.2 1.8 -18.2 1.8 -16.3 1.7 C-14.7 1.7 -13.1 1.6 -11.4 1.5 C-11.1 1.5 -11.1 1.5 -9.1 1.4 C-8.4 1.4 -7.7 1.4 -7 1.3 C-4.5 1 -2.9 0 0 0 Z " transform="translate(540.4,147.9)"/>
+<path d="M0 0 C1.1 -0 2.1 -0 3.3 -0 C4.4 -0 5.5 0 6.7 0 C7.8 0 9 0 10.1 -0 C11.2 -0 12.3 -0 13.4 0 C14.4 0 15.4 0 16.4 0 C18.7 0.1 18.7 0.1 19.7 1.1 C22.2 1.3 24.7 1.5 27.2 1.6 C34.6 2 34.6 2 35.7 3.1 C37.1 3.3 38.4 3.4 39.8 3.5 C43.7 3.9 46.5 4.8 50 6.4 C51.8 7.2 53.4 7.4 55.3 7.6 C58.9 8.2 60.6 9.2 63.7 11.1 C65 11.6 66.3 12 67.7 12.4 C76.6 15.2 84.8 20.1 92 25.9 C93.7 27.1 93.7 27.1 96.5 28.8 C98.6 30.1 100 31.4 101.7 33.1 C102.4 33.5 103.1 33.9 103.9 34.3 C107.4 36.6 110.1 39.3 113 42.2 C113.5 42.7 114.1 43.3 114.7 43.8 C115.2 44.4 115.7 44.9 116.2 45.4 C116.7 45.9 117.2 46.4 117.7 46.9 C118.7 48.1 118.7 48.1 118.7 50.1 C119.3 50.1 120 50.1 120.7 50.1 C120.7 36.3 120.7 22.4 120.7 8.1 C122.3 7.8 124 7.5 125.7 7.1 C126.1 7 126.1 7 127.9 6.6 C131.8 5.9 135.7 6 139.6 6 C140.5 6 141.3 6 142.2 6 C144 6 145.8 5.9 147.6 5.9 C150.3 5.9 153.1 5.9 155.8 5.9 C157.5 5.9 159.3 5.9 161 5.9 C161.4 5.9 161.4 5.9 163.5 5.9 C163.9 5.9 163.9 5.9 165.8 5.9 C166.5 5.9 167.2 5.9 167.9 5.9 C170.1 6.2 171 6.6 172.7 8.1 C173.1 10.3 173.1 10.3 173.1 13 C173.1 13.5 173.1 13.5 173.1 16.2 C173.1 17.3 173.1 18.5 173.1 19.6 C173.1 20.9 173.1 22.1 173.1 23.3 C173.1 26.7 173.1 30.1 173.1 33.5 C173 37.1 173 40.7 173.1 44.4 C173.1 51.5 173 58.7 173 65.8 C173 74.1 173 82.4 173 90.7 C173 105.5 173 120.3 173 135.1 C172.9 149.5 172.9 163.9 172.9 178.3 C172.9 179.2 172.9 180 172.9 181 C172.9 182.7 172.9 184.5 172.9 186.3 C172.9 187.2 172.9 188.1 172.9 189 C172.9 189.4 172.9 189.4 172.9 191.6 C172.9 205.3 172.9 219 172.9 232.7 C172.9 237.7 172.9 242.6 172.9 247.6 C172.9 255.5 172.9 263.4 172.9 271.3 C172.9 274.9 172.8 278.5 172.8 282.1 C172.8 285.4 172.8 288.6 172.8 291.9 C172.8 293.7 172.8 295.5 172.8 297.2 C172.8 298.3 172.8 299.3 172.8 300.4 C172.8 300.8 172.8 300.8 172.8 303.1 C172.7 305.1 172.7 305.1 171.7 306.1 C170.1 306.2 168.6 306.3 167 306.3 C166 306.3 165 306.3 164 306.3 C162.9 306.3 161.8 306.3 160.7 306.3 C160.1 306.3 160.1 306.3 157.3 306.3 C155 306.3 152.6 306.3 150.3 306.3 C147.3 306.3 144.3 306.3 141.3 306.3 C138.4 306.3 135.6 306.3 132.7 306.3 C131.6 306.3 130.5 306.3 129.4 306.3 C128.4 306.3 127.4 306.3 126.4 306.3 C125.5 306.3 124.6 306.3 123.7 306.3 C121.7 306.1 121.7 306.1 120.7 305.1 C120.6 303.8 120.5 302.6 120.5 301.3 C120.5 300.4 120.4 299.6 120.4 298.8 C120.4 298.3 120.4 298.3 120.4 296.1 C120.4 295.6 120.4 295.6 120.3 293.3 C120.2 290.4 120.2 287.5 120.1 284.6 C120.1 282.6 120 280.6 120 278.7 C119.9 273.8 119.8 269 119.7 264.1 C118.7 264.9 117.8 265.7 116.8 266.5 C116.3 266.9 115.7 267.3 115.2 267.8 C113.1 269.6 112 271.8 110.7 274.1 C108 277.2 105.2 279.1 101.7 281.1 C101.2 281.6 100.7 282.1 100.2 282.6 C98.2 284.6 96.1 285.7 93.7 287.1 C92.7 287.8 91.7 288.4 90.8 289.1 C90.2 289.4 89.7 289.8 89.2 290.1 C87.8 291.1 86.3 292.1 84.9 293.1 C78.8 297.1 72.8 300.3 65.8 302.4 C63.8 303.1 62 303.9 60.1 304.8 C57.2 306.1 54.6 306.5 51.4 306.8 C49.5 307.2 48.1 307.8 46.4 308.6 C42.4 310.5 38.4 310.7 33.9 310.9 C31.7 311.1 31.7 311.1 30.7 312.1 C29.1 312.2 27.6 312.3 26 312.3 C25 312.3 24 312.3 23 312.3 C21.9 312.3 20.8 312.3 19.7 312.3 C19.1 312.3 19.1 312.3 16.3 312.3 C14 312.3 11.6 312.3 9.3 312.3 C6.3 312.3 3.3 312.3 0.3 312.3 C-2.6 312.3 -5.5 312.3 -8.3 312.3 C-9.4 312.3 -10.5 312.3 -11.6 312.3 C-12.6 312.3 -13.6 312.3 -14.6 312.3 C-15.5 312.3 -16.4 312.3 -17.3 312.3 C-19.3 312.1 -19.3 312.1 -20.3 311.1 C-22.1 310.9 -24 310.8 -25.8 310.6 C-31.2 310.2 -31.2 310.2 -32.3 309.1 C-33.5 308.9 -34.6 308.8 -35.8 308.6 C-39.2 308.2 -39.2 308.2 -40.3 307.1 C-41.3 307 -42.3 306.9 -43.2 306.8 C-48.3 306.2 -52.7 304.1 -57.3 302.1 C-57.7 302 -57.7 302 -59.7 301.2 C-64.7 299.4 -69.4 297.1 -74.1 294.6 C-74.6 294.3 -75.1 294.1 -75.7 293.8 C-79.4 291.7 -82.8 289.5 -86.3 287.1 C-87.2 286.6 -88.1 286.1 -89 285.6 C-91.1 284.2 -92.5 282.9 -94.3 281.1 C-95.1 280.7 -95.9 280.2 -96.7 279.8 C-98.8 278.4 -100.1 277.4 -101.8 275.6 C-103.4 273.9 -104.6 273 -106.6 271.8 C-112.5 268.2 -116.9 263.1 -120.3 257.1 C-121.1 256.3 -122 255.4 -122.8 254.6 C-125.2 252.4 -126.7 250 -128.3 247.1 C-128.9 246.1 -129.6 245.2 -130.2 244.2 C-130.6 243.7 -130.9 243.2 -131.3 242.7 C-132.3 241.2 -133.3 239.8 -134.2 238.3 C-138.3 232.2 -141.5 226.1 -143.6 219.1 C-144.3 217.1 -144.3 217.1 -145.8 214.8 C-147.9 211.2 -148.7 207.4 -149.7 203.5 C-150.3 201.1 -150.3 201.1 -151.3 200.1 C-151.6 198.3 -151.8 196.5 -152 194.7 C-152.3 193.1 -152.3 193.1 -153.3 192.1 C-153.6 189.3 -153.8 186.5 -154 183.6 C-154.3 181.1 -154.3 181.1 -155.3 180.1 C-155.4 178.7 -155.4 177.3 -155.4 175.8 C-155.4 175.4 -155.4 175.4 -155.5 173 C-155.4 172 -155.4 171 -155.4 170 C-155.4 169 -155.4 168 -155.4 166.9 C-155.4 164.8 -155.4 162.6 -155.4 160.5 C-155.4 157.1 -155.4 153.8 -155.4 150.5 C-155.4 148.4 -155.4 146.3 -155.4 144.3 C-155.4 143.3 -155.4 142.3 -155.5 141.2 C-155.4 140.3 -155.4 139.4 -155.4 138.5 C-155.4 137.6 -155.4 136.8 -155.4 136 C-155.3 134.1 -155.3 134.1 -154.3 133.1 C-154.1 131.3 -153.9 129.5 -153.8 127.6 C-153.4 122.2 -153.4 122.2 -152.3 121.1 C-152.2 120.1 -152.1 119.1 -151.9 118 C-151.5 114.7 -150.5 112.1 -149.1 109.1 C-148.2 106.9 -147.7 104.6 -147.2 102.3 C-144.2 90.6 -137 79.5 -130.3 69.7 C-129.4 68.2 -128.5 66.8 -127.6 65.3 C-125.1 61.5 -121.7 58.5 -118.4 55.4 C-116.3 53.1 -114.9 50.8 -113.3 48.1 C-109.4 43.7 -105.5 40.1 -100.3 37.1 C-99.5 36.3 -98.6 35.5 -97.8 34.6 C-95.5 32.3 -93.2 30.7 -90.3 29.1 C-89.4 28.5 -88.6 27.9 -87.7 27.3 C-83.9 24.8 -79.9 22.7 -75.9 20.6 C-75.2 20.3 -74.5 19.9 -73.8 19.5 C-71.6 18.4 -69.5 17.2 -67.3 16.1 C-66.6 15.8 -65.9 15.4 -65.2 15 C-61.4 13.1 -57.9 11.6 -53.8 10.6 C-50.5 9.8 -47.6 8.9 -44.6 7.5 C-41.2 5.9 -38 5.6 -34.3 5.1 C-34 4.8 -33.7 4.5 -33.3 4.1 C-31 3.8 -28.7 3.6 -26.3 3.4 C-24.3 3.1 -24.3 3.1 -23.3 2.1 C-22.1 2 -20.8 1.9 -19.5 1.9 C-19.2 1.8 -19.2 1.8 -17.2 1.7 C-15.6 1.7 -14 1.6 -12.4 1.5 C-12 1.5 -12 1.5 -10.1 1.4 C-9.4 1.4 -8.7 1.4 -8 1.3 C-5.1 1 -3.3 0 0 0 Z M-7.3 49.1 C-9.6 49.5 -11.9 49.6 -14.3 49.9 C-16.3 50.1 -16.3 50.1 -17.3 51.1 C-18.3 51.3 -19.4 51.4 -20.4 51.5 C-23.8 51.9 -26.4 52.9 -29.5 54.3 C-31.4 55.2 -33.4 55.8 -35.4 56.4 C-45 59.5 -53.5 64.9 -61.3 71.1 C-61.9 71.6 -62.5 72 -63.2 72.4 C-67.7 75.6 -71.7 79.3 -75.6 83.2 C-76.1 83.7 -76.7 84.2 -77.2 84.7 C-80.1 87.7 -82.2 90.5 -84.3 94.1 C-85.3 95.1 -86.3 96.1 -87.3 97.1 C-88.3 99 -88.3 99 -89.2 100.9 C-90.5 103.5 -91.7 105.8 -93.4 108.1 C-95.6 111.2 -96.6 114.6 -97.7 118.3 C-98.3 120.1 -98.3 120.1 -99.3 121.1 C-99.5 122.3 -99.7 123.5 -99.8 124.6 C-100.2 128 -100.2 128 -101.3 129.1 C-101.5 130.6 -101.7 132.1 -101.8 133.6 C-102.2 138 -102.2 138 -103.3 139.1 C-103.4 141.8 -103.5 144.4 -103.4 147.1 C-103.4 147.9 -103.4 148.7 -103.4 149.5 C-103.4 151.2 -103.4 152.8 -103.4 154.5 C-103.4 157.1 -103.4 159.7 -103.4 162.3 C-103.4 163.9 -103.4 165.6 -103.4 167.2 C-103.4 168 -103.4 168.8 -103.5 169.6 C-103.4 175 -103.4 175 -102.3 176.1 C-102.2 177.5 -102 178.9 -101.9 180.3 C-101.6 184 -100.8 186.9 -99.1 190.3 C-98.2 192.4 -97.6 194.4 -96.9 196.5 C-94.5 203.9 -90.5 210.1 -85.7 216.2 C-84.3 218.1 -84.3 218.1 -83 220.4 C-81.2 223.4 -79 225.7 -76.6 228.1 C-76.2 228.6 -75.7 229 -75.2 229.5 C-74.3 230.4 -73.3 231.4 -72.4 232.3 C-70.9 233.8 -69.5 235.2 -68.1 236.6 C-67.1 237.6 -66.2 238.5 -65.3 239.4 C-64.9 239.8 -64.4 240.3 -64 240.7 C-61.3 243.4 -58.6 245.3 -55.3 247.1 C-54.7 247.5 -54 247.9 -53.3 248.2 C-36.9 257.1 -36.9 257.1 -28.3 260.1 C-27.3 260.5 -26.3 260.9 -25.2 261.3 C-21.9 262.3 -18.6 262.6 -15.2 262.9 C-13.3 263.1 -13.3 263.1 -12.3 264.1 C-11 264.2 -9.7 264.3 -8.4 264.3 C-7.9 264.3 -7.9 264.3 -5.8 264.3 C-4.9 264.3 -4 264.3 -3.1 264.3 C-2.1 264.3 -1.2 264.3 -0.2 264.3 C1.7 264.3 3.7 264.3 5.7 264.3 C8.7 264.3 11.7 264.3 14.7 264.3 C16.6 264.3 18.5 264.3 20.4 264.3 C20.9 264.3 20.9 264.3 23.2 264.3 C24 264.3 24.9 264.3 25.7 264.3 C26.1 264.3 26.1 264.3 28 264.3 C29.7 264.1 29.7 264.1 30.7 263.1 C33 262.8 35.3 262.6 37.7 262.4 C39.7 262.1 39.7 262.1 40.7 261.1 C41.8 261 42.8 260.9 43.9 260.8 C47.5 260.3 49.6 259 52.7 257.1 C54.1 256.6 55.5 256.2 56.9 255.8 C64.4 253.4 70.6 249.4 76.8 244.6 C78.7 243.1 78.7 243.1 81.1 241.8 C83.7 240.2 85.6 238.5 87.8 236.3 C88.5 235.6 89.3 234.8 90 234.1 C90.8 233.3 91.5 232.5 92.3 231.8 C93.1 231 93.8 230.2 94.6 229.5 C95.4 228.7 96.1 228 96.9 227.2 C97.2 226.9 97.2 226.9 98.9 225.2 C100.8 223 102.2 220.7 103.7 218.1 C104.7 217.1 105.7 216.1 106.7 215.1 C107.7 213.5 108.7 211.8 109.7 210.1 C109.9 209.8 109.9 209.8 111.2 207.9 C112.9 204.8 113.9 201.7 114.9 198.4 C115.6 196.4 116.4 194.4 117.2 192.4 C119.6 187 121 182 121.4 176 C121.7 174.1 121.7 174.1 122.7 173.1 C122.8 170.8 122.8 168.4 122.8 166.1 C122.8 165.4 122.8 164.7 122.8 163.9 C122.8 162.4 122.8 160.9 122.8 159.4 C122.8 157.1 122.8 154.8 122.8 152.5 C122.8 151.1 122.8 149.6 122.8 148.2 C122.8 147.8 122.8 147.8 122.8 146.1 C122.8 141.2 122.8 141.2 121.7 140.1 C121.5 138.4 121.4 136.7 121.3 135 C121 130.8 120.3 127.6 118.5 123.9 C117.6 121.9 117 120 116.4 118 C113.6 109.3 108.8 101 103 93.9 C101.7 92.1 101.7 92.1 100.5 89.9 C97.9 85.9 94.7 82.8 91.3 79.5 C91 79.2 91 79.2 89.3 77.5 C86 74.1 82.9 71.4 78.7 69.1 C77.7 68.1 76.7 67.1 75.7 66.1 C73.9 65.1 73.9 65.1 71.9 64.2 C69.3 63 67.2 61.8 64.9 60.1 C61.4 57.6 57.4 56.9 53.2 55.9 C50.4 55 48.2 53.7 45.7 52.1 C43.4 51.7 41.1 51.4 38.7 51.1 C38.4 50.8 38 50.5 37.7 50.1 C36.2 49.9 34.7 49.8 33.2 49.6 C28.8 49.2 28.8 49.2 27.7 48.1 C25.2 48 22.7 48 20.2 48 C19.4 48 18.7 48 17.9 48 C16.3 48 14.7 48 13.1 48 C10.7 48 8.3 48 5.8 48 C4.3 48 2.7 48 1.2 48 C0.5 48 -0.3 48 -1 48 C-6.2 48 -6.2 48 -7.3 49.1 Z " transform="translate(913.3,147.9)"/>
+<path d="M0 0 C0.3 -0 0.3 -0 1.7 -0 C3 -0 4.2 -0 5.4 0 C7.2 0 9.1 0 11 -0 C12.1 -0 13.3 -0 14.5 0 C15.6 0 16.7 0 17.8 0 C20.2 0.1 20.2 0.1 21.2 1.1 C22.5 1.3 23.8 1.4 25 1.4 C25.8 1.5 26.6 1.5 27.3 1.5 C28.1 1.6 28.9 1.6 29.8 1.6 C31.3 1.7 32.9 1.8 34.5 1.9 C35.2 1.9 35.9 1.9 36.6 1.9 C38.2 2.1 38.2 2.1 39.2 3.1 C40.7 3.3 42.2 3.5 43.8 3.6 C48.1 4 48.1 4 49.2 5.1 C49.8 5.2 49.8 5.2 52.4 5.5 C55.7 5.9 58.3 6.9 61.3 8.3 C63.5 9.2 65.8 9.7 68.1 10.3 C79.7 13.3 90.9 20.4 100.7 27.1 C102.2 28.1 103.7 29 105.2 29.9 C108.4 32.1 110.9 34.8 113.6 37.5 C115.2 39.1 115.2 39.1 117.7 40.6 C122.7 43.6 128.3 48.5 130.2 54.1 C130.1 56.2 130.1 56.2 129.2 58.1 C127.5 59.5 127.5 59.5 125.4 60.7 C122.6 62.3 120.5 63.8 118.2 66.1 C116.6 67.2 114.9 68.2 113.2 69.1 C111.2 70.4 109.2 71.8 107.2 73.1 C106.2 73.8 105.2 74.5 104.2 75.1 C103.8 75.5 103.3 75.8 102.8 76.1 C101.7 76.8 100.7 77.5 99.7 78.2 C97.4 79.7 95.2 81.2 93.2 83 C91.2 84.1 91.2 84.1 89 83.5 C85.5 81.8 83.4 79.5 80.8 76.7 C77.5 73.2 74.5 70.5 70.2 68.1 C70 67.9 70 67.9 68.9 66.7 C67 64.9 65.3 64 63 63 C62.6 62.8 62.6 62.8 60.6 61.8 C59.7 61.4 58.9 61 58 60.6 C57.2 60.2 56.3 59.9 55.5 59.4 C53.1 58.3 50.7 57.2 48.2 56.1 C47.6 55.8 46.9 55.5 46.2 55.2 C43.3 53.9 40.6 52.8 37.4 52.5 C34.2 52.1 34.2 52.1 33.2 51.1 C32.1 50.9 30.9 50.8 29.8 50.6 C26.4 50.2 26.4 50.2 25.2 49.1 C22.9 49 20.6 49 18.2 49 C17.5 49 16.8 49 16 49 C14.6 49 13.1 49 11.6 49 C9.3 49 7 49 4.7 49 C3.2 49 1.8 49 0.3 49 C-0.4 49 -1.1 49 -1.8 49 C-6.6 49 -6.6 49 -7.8 50.1 C-10.1 50.5 -12.4 50.6 -14.7 50.9 C-16.8 51.1 -16.8 51.1 -17.8 52.1 C-18.7 52.2 -19.7 52.3 -20.7 52.4 C-28.9 53.6 -36.1 57.7 -43.4 61.5 C-44.1 61.9 -44.8 62.2 -45.5 62.6 C-54.3 67.3 -61.3 73.3 -68.3 80.4 C-69.6 81.7 -70.8 83 -72.1 84.2 C-72.5 84.6 -72.5 84.6 -74.6 86.7 C-75.3 87.4 -76 88.2 -76.8 88.9 C-78.8 91.2 -80.3 93.5 -81.8 96.1 C-82.1 96.8 -82.5 97.5 -82.9 98.2 C-84.1 100.4 -85.3 102.6 -86.4 104.8 C-86.9 105.6 -87.3 106.4 -87.7 107.2 C-87.9 107.5 -87.9 107.5 -88.9 109.4 C-89.2 110.1 -89.6 110.7 -90 111.4 C-90.8 113.1 -90.8 113.1 -90.8 115.1 C-90.1 115.1 -89.5 115.1 -88.8 115.1 C-73.3 115.2 -57.8 115.4 -42.3 115.5 C-34.8 115.5 -27.3 115.6 -19.8 115.6 C-13.3 115.7 -6.7 115.7 -0.2 115.8 C3.3 115.8 6.7 115.8 10.2 115.8 C13.4 115.9 16.7 115.9 19.9 115.9 C21.1 115.9 22.3 115.9 23.5 115.9 C25.2 115.9 26.8 116 28.4 116 C29.3 116 30.2 116 31.2 116 C33.2 116.1 33.2 116.1 34.2 117.1 C34.3 118.9 34.4 120.7 34.4 122.4 C34.4 123.5 34.4 124.6 34.4 125.7 C34.4 126.8 34.4 128 34.4 129.1 C34.4 130.3 34.4 131.4 34.4 132.6 C34.4 133.1 34.4 133.1 34.4 135.8 C34.4 136.8 34.4 137.8 34.4 138.8 C34.2 141.1 34.2 141.1 33.2 142.1 C31.6 142.2 29.9 142.3 28.2 142.3 C27.7 142.3 27.7 142.3 24.9 142.3 C23.7 142.3 22.5 142.3 21.2 142.3 C20 142.3 18.7 142.3 17.4 142.3 C14.6 142.3 11.9 142.4 9.1 142.4 C4.8 142.4 0.4 142.4 -3.9 142.4 C-16.3 142.5 -28.7 142.6 -41.1 142.6 C-48 142.6 -54.8 142.7 -61.6 142.7 C-66 142.7 -70.3 142.8 -74.6 142.8 C-77.3 142.8 -80 142.8 -82.7 142.8 C-84 142.8 -85.2 142.8 -86.5 142.8 C-88.2 142.8 -89.9 142.8 -91.6 142.9 C-92.5 142.9 -93.5 142.9 -94.5 142.9 C-96.8 143.1 -96.8 143.1 -98.8 145.1 C-99 147.3 -99 147.3 -99 150.1 C-99 151 -99 152 -99 153 C-99 153.5 -99 153.5 -99 156.1 C-99 157.2 -99 158.2 -99 159.2 C-99 159.7 -99 159.7 -99 162.2 C-99 162.6 -99 162.6 -99 164.9 C-98.8 167.1 -98.8 167.1 -96.8 169.1 C-94.5 169.4 -94.5 169.4 -91.6 169.4 C-90.5 169.4 -89.4 169.4 -88.3 169.4 C-87 169.4 -85.8 169.4 -84.6 169.4 C-83.3 169.4 -82 169.5 -80.8 169.5 C-78 169.5 -75.3 169.5 -72.5 169.5 C-68.1 169.5 -63.8 169.5 -59.4 169.6 C-52.5 169.6 -45.6 169.6 -38.8 169.7 C-26.4 169.7 -14.1 169.8 -1.7 169.9 C2.6 169.9 6.9 169.9 11.3 169.9 C14 169.9 16.6 169.9 19.3 169.9 C20.6 170 21.8 170 23.1 170 C24.8 170 26.5 170 28.2 170 C28.7 170 28.7 170 31.1 170 C33.2 170.1 33.2 170.1 34.2 171.1 C34.3 172.9 34.4 174.7 34.4 176.4 C34.4 177.5 34.4 178.6 34.4 179.7 C34.4 180.8 34.4 182 34.4 183.1 C34.4 184.3 34.4 185.4 34.4 186.6 C34.4 187.1 34.4 187.1 34.4 189.8 C34.4 190.8 34.4 191.8 34.4 192.8 C34.2 195.1 34.2 195.1 33.2 196.1 C31.6 196.2 30 196.3 28.4 196.3 C27.4 196.3 26.3 196.3 25.3 196.3 C24.1 196.3 22.9 196.3 21.8 196.3 C20.5 196.3 19.3 196.4 18.1 196.4 C14.8 196.4 11.4 196.4 8.1 196.4 C4.6 196.5 1.2 196.5 -2.3 196.5 C-8.9 196.6 -15.5 196.6 -22 196.7 C-29.5 196.7 -37 196.8 -44.5 196.8 C-59.9 196.9 -75.3 197 -90.8 197.1 C-90.3 198.6 -89.8 200 -89.4 201.4 C-89.1 202.2 -88.9 203 -88.6 203.8 C-87.4 207 -85.8 209.4 -83.8 212.1 C-82.8 213.8 -81.8 215.5 -80.8 217.1 C-78.8 220.3 -76.9 223.1 -74.2 225.7 C-71.8 228.1 -70.4 230.3 -68.8 233.1 C-66.7 235.4 -65 237 -62.3 238.6 C-59.8 240.1 -58.1 241.7 -56.2 243.9 C-47.9 251.4 -34.5 257.3 -23.7 259.7 C-21.8 260.1 -21.8 260.1 -20.8 261.1 C-19.3 261.3 -17.8 261.5 -16.2 261.6 C-11.9 262 -11.9 262 -10.8 263.1 C-9.2 263.3 -9.2 263.3 -7.2 263.3 C-6.4 263.3 -5.6 263.3 -4.9 263.3 C-4 263.3 -3.2 263.3 -2.4 263.3 C-1.5 263.3 -0.7 263.3 0.2 263.3 C1.9 263.3 3.7 263.3 5.5 263.3 C8.2 263.3 11 263.3 13.7 263.3 C15.4 263.3 17.2 263.3 18.9 263.3 C19.7 263.3 20.5 263.3 21.4 263.3 C22.1 263.3 22.9 263.3 23.7 263.3 C24.3 263.3 25 263.3 25.7 263.3 C27.2 263.1 27.2 263.1 28.2 262.1 C29.6 262 31 261.9 32.4 261.8 C36.2 261.4 39 260.6 42.4 258.9 C44.5 258 46.5 257.4 48.6 256.8 C56 254.3 62.3 250.4 68.3 245.6 C70.2 244.1 70.2 244.1 72.7 242.8 C76.1 240.6 78.7 237.7 81.4 234.6 C83.7 232.2 85.2 231.1 88.4 230.2 C91.2 230.1 91.2 230.1 93 231 C93.4 231.5 93.9 231.9 94.3 232.4 C96.8 234.7 99.3 236.4 102.2 238.1 C104.3 239.4 106.3 240.8 108.2 242.1 C109.2 242.8 110.2 243.5 111.2 244.1 C111.7 244.5 112.2 244.8 112.7 245.1 C113.8 245.8 114.8 246.5 115.9 247.2 C118.6 249 120.9 250.8 123.2 253.1 C124.1 253.6 125 254 125.9 254.5 C128.2 256.1 128.2 256.1 129.2 258.4 C129.3 261.4 129.1 261.8 127.1 263.9 C126.1 264.9 125.1 265.8 124.1 266.8 C123.6 267.2 123.2 267.7 122.6 268.2 C119.7 271 116.8 273.1 113.2 275.1 C111.4 276.9 111.4 276.9 109.8 278.6 C107.1 281.4 104.6 283.3 101.2 285.1 C100.3 285.7 99.4 286.4 98.5 287 C94.8 289.5 90.8 291.6 86.8 293.7 C84.3 295 82.3 296.1 80.2 298.1 C78.3 298.9 78.3 298.9 76.1 299.6 C73.2 300.5 70.6 301.4 67.9 302.6 C63.9 304.4 59.7 305.4 55.5 306.5 C53.2 307.1 53.2 307.1 52.2 308.1 C50.5 308.4 48.7 308.6 46.8 308.9 C45.2 309.1 45.2 309.1 44.2 310.1 C41.5 310.4 38.7 310.6 35.9 310.7 C31.4 311 31.4 311 30.2 312.1 C28.8 312.2 27.4 312.3 25.9 312.3 C25 312.3 24.1 312.3 23.1 312.3 C22.2 312.3 21.2 312.3 20.1 312.3 C19.1 312.3 18.1 312.3 17 312.3 C14.9 312.3 12.7 312.3 10.6 312.3 C7.3 312.3 4 312.3 0.6 312.3 C-1.4 312.3 -3.5 312.3 -5.6 312.3 C-6.1 312.3 -6.1 312.3 -8.6 312.3 C-9.6 312.3 -10.5 312.3 -11.4 312.3 C-12.2 312.3 -13.1 312.3 -13.9 312.3 C-15.8 312.1 -15.8 312.1 -16.8 311.1 C-18.2 310.9 -19.7 310.8 -21.2 310.6 C-25.6 310.2 -25.6 310.2 -26.8 309.1 C-27.9 308.9 -29.1 308.8 -30.2 308.6 C-33.6 308.2 -33.6 308.2 -34.8 307.1 C-35.8 307 -36.8 306.9 -37.9 306.8 C-41.2 306.3 -43.8 305.4 -46.8 304 C-48.8 303.1 -50.8 302.5 -52.9 301.8 C-57.7 300.2 -61.9 298.2 -66.3 295.8 C-67.1 295.4 -67.8 295 -68.6 294.6 C-73.1 292.2 -77.3 289.6 -81.3 286.3 C-83.3 284.7 -85.5 283.4 -87.8 282.1 C-90.9 280.2 -93.7 278.3 -96.3 275.6 C-98.8 273.1 -98.8 273.1 -101.1 271.8 C-106.9 268.2 -111.4 263.1 -114.8 257.1 C-116 255.8 -117.3 254.6 -118.6 253.4 C-120.3 251.5 -121.5 249.3 -122.8 247.1 C-123.2 246.6 -123.7 246.1 -124.2 245.6 C-126.2 243.7 -127.4 241.5 -128.8 239.1 C-129.4 238.2 -130 237.3 -130.6 236.4 C-132.7 233.3 -134.5 230.1 -136.3 226.8 C-136.6 226.3 -136.9 225.7 -137.2 225.1 C-139.3 221.2 -140.9 217.3 -142.1 213.1 C-142.9 210.6 -144 208.2 -145.1 205.8 C-145.8 204.1 -146.3 202.5 -146.9 200.8 C-147.8 198.1 -147.8 198.1 -148.8 197.1 C-150.1 197 -151.5 197 -152.9 196.9 C-153.8 196.9 -154.6 196.9 -155.5 196.9 C-156.5 196.9 -157.5 196.9 -158.4 196.9 C-158.9 196.8 -158.9 196.8 -161.4 196.8 C-164.5 196.7 -167.6 196.7 -170.8 196.6 C-174.9 196.6 -179 196.5 -183.1 196.4 C-184 196.4 -185 196.4 -186 196.4 C-186.8 196.4 -187.7 196.3 -188.6 196.3 C-189.4 196.3 -190.2 196.3 -191 196.3 C-192.8 196.1 -192.8 196.1 -193.8 195.1 C-193.8 193.4 -193.9 191.6 -193.9 189.8 C-193.9 188.7 -193.9 187.7 -193.9 186.6 C-193.9 186 -193.9 186 -193.9 183.1 C-193.9 182 -193.9 180.9 -193.9 179.7 C-193.9 178.6 -193.9 177.6 -193.9 176.4 C-193.9 175.5 -193.9 174.5 -193.9 173.4 C-193.8 171.1 -193.8 171.1 -192.8 170.1 C-190.7 169.8 -188.6 169.6 -186.6 169.4 C-184.8 169.1 -184.8 169.1 -183.8 168.1 C-181.6 168 -179.5 167.9 -177.3 167.8 C-176.7 167.8 -176 167.8 -175.4 167.8 C-173.3 167.7 -171.2 167.6 -169.2 167.6 C-167.8 167.5 -166.4 167.5 -165 167.4 C-161.6 167.3 -158.2 167.2 -154.8 167.1 C-154.6 163.3 -154.4 159.5 -154.2 155.7 C-154.2 155.2 -154.2 155.2 -154 152.4 C-154 151.9 -154 151.9 -153.9 149.3 C-153.8 148.3 -153.8 147.3 -153.7 146.4 C-153.8 144.1 -153.8 144.1 -154.8 143.1 C-156.3 143 -156.3 143 -158.3 142.9 C-159.1 142.9 -159.9 142.9 -160.6 142.9 C-161.5 142.9 -162.3 142.9 -163.1 142.9 C-163.5 142.8 -163.5 142.8 -165.7 142.8 C-168.4 142.7 -171.1 142.7 -173.8 142.6 C-177.3 142.6 -180.8 142.5 -184.4 142.4 C-185.2 142.4 -186 142.4 -186.9 142.4 C-187.6 142.4 -188.4 142.3 -189.2 142.3 C-189.8 142.3 -190.5 142.3 -191.2 142.3 C-192.8 142.1 -192.8 142.1 -193.8 141.1 C-193.8 139.4 -193.9 137.6 -193.9 135.8 C-193.9 134.7 -193.9 133.7 -193.9 132.6 C-193.9 132 -193.9 132 -193.9 129.1 C-193.9 128 -193.9 126.9 -193.9 125.7 C-193.9 124.6 -193.9 123.6 -193.9 122.4 C-193.9 121.5 -193.9 120.5 -193.9 119.4 C-193.8 117.1 -193.8 117.1 -192.8 116.1 C-191.4 116.1 -190 116.1 -188.7 116.1 C-187.8 116.2 -186.9 116.2 -186.1 116.2 C-185.1 116.2 -184.2 116.2 -183.2 116.3 C-180.2 116.3 -177.2 116.3 -174.2 116.3 C-172.1 116.4 -170 116.4 -167.9 116.5 C-150.9 117 -150.9 117 -147.3 113.9 C-144.9 110.3 -144.4 106.4 -143.8 102.1 C-143.1 100.4 -142.5 98.6 -141.8 96.9 C-141.4 96.1 -141.1 95.3 -140.8 94.5 C-138.1 88.3 -134.5 82.7 -130.8 77.1 C-130.3 76.3 -129.8 75.5 -129.2 74.6 C-126.7 70.4 -124.2 66.6 -120.8 63.1 C-120.3 62.4 -119.9 61.7 -119.5 60.9 C-117.5 57.7 -115.1 55.2 -112.4 52.5 C-111.9 52 -111.3 51.5 -110.8 50.9 C-109.7 49.8 -108.6 48.8 -107.5 47.7 C-105.9 46 -104.2 44.3 -102.6 42.7 C-101.5 41.6 -100.4 40.6 -99.4 39.5 C-98.9 39 -98.4 38.5 -97.9 38 C-95 35.2 -92.3 33.1 -88.8 31.1 C-88.3 30.6 -87.8 30.1 -87.2 29.6 C-81.7 24.1 -72.8 20.8 -65.9 17.2 C-64 16.3 -62.2 15.3 -60.4 14.3 C-54.6 11.3 -49.1 9.2 -42.8 7.7 C-40.8 7.1 -40.8 7.1 -39.8 6.1 C-38 5.8 -36.2 5.6 -34.3 5.4 C-32.8 5.1 -32.8 5.1 -31.8 4.1 C-29.4 3.8 -27.1 3.6 -24.8 3.4 C-22.8 3.1 -22.8 3.1 -21.8 2.1 C-18.5 1.9 -15.3 1.7 -12.1 1.5 C-7.6 1.3 -4.6 0 0 0 Z " transform="translate(1487.8,147.9)"/>
+<path d="M0 0 C0.6 0 1.2 0 1.8 0 C2.1 0 2.1 0 3.7 0 C5 0 6.3 0 7.6 0 C9.6 0 11.6 0 13.7 0 C14.9 0 16.2 0 17.5 0 C18.1 0 18.7 0 19.3 0 C23.5 0 23.5 0 24.6 1.1 C27.1 1.4 29.6 1.5 32.1 1.6 C39.5 2 39.5 2 40.6 3.1 C42.1 3.3 43.6 3.5 45.1 3.6 C49.5 4 49.5 4 50.6 5.1 C51.8 5.3 53 5.5 54.1 5.6 C57.5 6 57.5 6 58.6 7.1 C59.2 7.2 59.2 7.2 61.8 7.5 C65.1 7.9 67.7 8.9 70.7 10.3 C72.7 11.2 74.7 11.8 76.8 12.5 C81.6 14 86 16.2 90.4 18.6 C91.1 19 91.8 19.4 92.6 19.8 C97.9 22.7 103.1 25.7 108.1 29.1 C109.1 29.8 110.1 30.5 111.2 31.1 C113.8 32.8 116.1 34.5 118.2 36.7 C120.6 39.1 120.6 39.1 123 40.5 C128.8 44.1 133.1 49.2 136.6 55.1 C137.8 56.3 139 57.5 140.1 58.6 C142.9 61.3 144.9 63.7 146.6 67.1 C147.5 68.6 148.3 70.1 149.1 71.6 C149.5 72.4 149.9 73.1 150.4 73.9 C151.4 75.8 152.5 77.4 153.8 79.1 C157 83.9 158.3 89.6 159.6 95.1 C153.6 98 148.2 98.6 141.7 98.8 C136.7 99.1 136.7 99.1 135.6 100.1 C132.4 100.4 129.2 100.6 126 100.7 C120.7 101 120.7 101 119.6 102.1 C117.5 102.3 115.4 102.3 113.3 102.3 C112.7 102.3 112.1 102.4 111.5 102.4 C109.1 102.4 107.1 102.3 104.8 101.4 C103.4 99.9 102.7 98.4 101.8 96.5 C98.4 89.4 93.6 83.9 88.1 78.3 C87.6 77.9 87.2 77.4 86.7 76.9 C83.9 74.1 81.1 72.1 77.6 70.1 C77.2 69.7 76.7 69.2 76.3 68.7 C74.4 66.9 72.7 66 70.4 65 C69.5 64.6 68.7 64.2 67.9 63.8 C67.4 63.6 67.4 63.6 65.3 62.6 C56.2 58.5 56.2 58.5 52.8 56.4 C50.3 55 48.2 54.7 45.4 54.5 C43.5 54.1 42.1 53.5 40.4 52.6 C36.4 50.7 32.3 50.6 27.9 50.4 C25.6 50.1 25.6 50.1 24.6 49.1 C22.4 49 20.2 49 18 49 C17.7 49 17.7 49 16 49 C14.6 49 13.2 49 11.8 49 C9.7 49 7.5 49 5.3 49 C4 49 2.6 49 1.3 49 C0.6 49 -0 49 -0.7 49 C-5.2 49 -5.2 49 -6.4 50.1 C-8.7 50.5 -11 50.7 -13.3 50.9 C-15.4 51.1 -15.4 51.1 -16.4 52.1 C-17.4 52.3 -18.4 52.4 -19.5 52.5 C-22.8 52.9 -25.5 53.9 -28.5 55.3 C-30.5 56.2 -32.4 56.8 -34.5 57.4 C-44 60.5 -52.6 65.9 -60.4 72.1 C-61 72.6 -61.6 73 -62.2 73.5 C-66.6 76.5 -70.4 80 -74.2 83.7 C-74.6 84.2 -75.1 84.6 -75.6 85.1 C-78.4 87.9 -80.4 90.7 -82.4 94.1 C-83 95.1 -83.6 96 -84.3 96.9 C-86.8 100.7 -88.9 104.7 -91 108.8 C-91.4 109.5 -91.8 110.3 -92.2 111 C-93.2 113.1 -94.3 115.1 -95.4 117.1 C-95.7 117.8 -96.1 118.5 -96.5 119.3 C-97.4 121.2 -97.7 122.7 -97.9 124.8 C-98.4 128.1 -98.4 128.1 -99.4 129.1 C-99.6 130.3 -99.7 131.5 -99.9 132.6 C-100.2 136 -100.2 136 -101.4 137.1 C-101.6 139.6 -101.7 142.1 -101.9 144.6 C-102.2 152 -102.2 152 -103.4 153.1 C-103.5 156.1 -103.5 156.1 -103.4 159.1 C-103 159.5 -102.7 159.8 -102.4 160.1 C-102.2 161.4 -102.1 162.7 -102.1 163.9 C-102 164.7 -102 165.4 -102 166.2 C-101.9 167.8 -101.8 169.4 -101.8 171.1 C-101.7 171.8 -101.7 172.6 -101.6 173.4 C-101.6 174.1 -101.6 174.8 -101.5 175.5 C-101.4 177.1 -101.4 177.1 -100.4 178.1 C-100.3 179.1 -100.2 180.1 -100 181.1 C-99.4 186.1 -97.3 190.5 -95.4 195.1 C-94.7 196.8 -94.1 198.5 -93.4 200.2 C-88.4 212.7 -80.7 222.2 -71.2 231.6 C-69.8 233 -68.4 234.4 -67 235.8 C-66.1 236.7 -65.1 237.6 -64.2 238.5 C-63.4 239.3 -62.6 240.2 -61.8 241 C-59.4 243.1 -57.1 244.6 -54.4 246.1 C-53.7 246.5 -53 246.9 -52.4 247.3 C-50.3 248.4 -48.2 249.5 -46.1 250.6 C-45.4 251 -44.7 251.4 -43.9 251.8 C-39.4 254.2 -35 256.1 -30.1 257.5 C-28.4 258.1 -28.4 258.1 -27.4 259.1 C-26.2 259.3 -25 259.5 -23.9 259.6 C-20.5 260 -20.5 260 -19.4 261.1 C-18.2 261.3 -17 261.5 -15.9 261.6 C-12.5 262 -12.5 262 -11.4 263.1 C-10 263.2 -8.7 263.3 -7.4 263.3 C-6.6 263.3 -5.7 263.3 -4.9 263.3 C-4 263.3 -3 263.3 -2.1 263.3 C-1.2 263.3 -0.2 263.3 0.7 263.3 C2.7 263.3 4.6 263.3 6.6 263.3 C9.6 263.3 12.7 263.3 15.7 263.3 C17.6 263.3 19.5 263.3 21.4 263.3 C21.8 263.3 21.8 263.3 24.2 263.3 C25 263.3 25.8 263.3 26.7 263.3 C27.1 263.3 27.1 263.3 28.9 263.3 C30.6 263.1 30.6 263.1 31.6 262.1 C33 262 34.4 261.9 35.8 261.8 C39.5 261.4 42.4 260.6 45.7 259 C47.7 258.1 49.7 257.5 51.8 256.8 C56.6 255.3 60.8 253.2 65.2 250.8 C65.9 250.5 66.6 250.1 67.3 249.7 C76.2 245 83.2 238.9 90.2 231.8 C91.5 230.6 92.7 229.3 94 228 C94.8 227.2 95.6 226.4 96.5 225.6 C96.8 225.2 96.8 225.2 98.7 223.4 C100.7 221.1 102.2 218.8 103.6 216.1 C105 213.8 105 213.8 106.6 212.1 C109.3 211.8 109.3 211.8 111.6 212.1 C112 212.5 112.3 212.8 112.6 213.1 C114.5 213.3 116.3 213.5 118.1 213.6 C123.5 214 123.5 214 124.6 215.1 C126.5 215.3 128.3 215.5 130.1 215.6 C135.5 216 135.5 216 136.6 217.1 C138.8 217.3 141 217.5 143.1 217.6 C149.5 218 149.5 218 150.6 219.1 C152 219.4 153.3 219.6 154.7 219.7 C155.4 219.8 156.2 219.9 156.9 220 C157.5 220 158.1 220.1 158.6 220.1 C158.4 225 157.8 228.5 154.8 232.5 C153.4 234.4 152.4 236.4 151.3 238.5 C149.2 242.4 146.8 245.8 144.1 249.2 C142.6 251.1 142.6 251.1 141.4 253.4 C139.5 256.4 137.2 258.8 134.7 261.3 C134.2 261.8 133.8 262.3 133.3 262.8 C132.3 263.8 131.3 264.8 130.3 265.8 C128.8 267.3 127.3 268.8 125.8 270.3 C124.8 271.3 123.8 272.2 122.8 273.2 C122.4 273.7 121.9 274.1 121.5 274.6 C118.8 277.3 116 279.3 112.6 281.1 C111.7 281.8 110.7 282.4 109.7 283.1 C108.7 283.8 107.7 284.5 106.6 285.1 C106.2 285.4 106.2 285.4 104 287 C100.2 289.5 96.3 291.6 92.3 293.6 C91.9 293.8 91.9 293.8 90.1 294.8 C88 295.9 85.8 297 83.6 298.1 C82.9 298.5 82.2 298.9 81.5 299.3 C77.6 301.3 74 302.8 69.7 303.8 C64.7 305.1 64.7 305.1 63.6 306.1 C61.8 306.5 60 306.6 58.2 306.9 C56.6 307.1 56.6 307.1 55.6 308.1 C53.8 308.5 52 308.6 50.2 308.9 C48.6 309.1 48.6 309.1 47.6 310.1 C44.9 310.4 42.1 310.6 39.3 310.7 C34.7 311 34.7 311 33.6 312.1 C32.1 312.2 30.5 312.3 29 312.3 C28 312.3 27 312.3 25.9 312.3 C24.8 312.3 23.8 312.3 22.6 312.3 C22.1 312.3 22.1 312.3 19.3 312.3 C16.9 312.3 14.6 312.3 12.3 312.3 C9.3 312.3 6.2 312.3 3.2 312.3 C0.4 312.3 -2.5 312.3 -5.4 312.3 C-6.4 312.3 -7.5 312.3 -8.6 312.3 C-9.6 312.3 -10.6 312.3 -11.7 312.3 C-12.6 312.3 -13.4 312.3 -14.3 312.3 C-16.4 312.1 -16.4 312.1 -17.4 311.1 C-19.2 310.9 -21 310.8 -22.9 310.6 C-28.2 310.2 -28.2 310.2 -29.4 309.1 C-30.4 309 -31.4 308.9 -32.5 308.8 C-35.1 308.4 -37.2 307.9 -39.6 306.8 C-42.6 305.4 -45.5 304.5 -48.7 303.7 C-61.3 300.3 -73.4 294.6 -83.7 286.4 C-85.8 284.8 -88.1 283.5 -90.4 282.1 C-93.7 280 -96.6 277.9 -99.4 275.1 C-100.1 274.8 -100.8 274.4 -101.5 274 C-105.3 271.5 -108.3 268.5 -111.5 265.3 C-111.8 265 -111.8 265 -113.4 263.4 C-116.6 260.2 -119.1 257.2 -121.4 253.1 C-122.6 251.7 -122.6 251.7 -123.9 250.6 C-126.2 248.3 -127.8 246.1 -129.4 243.1 C-134.2 234.2 -134.2 234.2 -136.4 231.1 C-140.2 225.5 -142.6 219.7 -144.6 213.3 C-145.3 211.3 -146.1 209.4 -147 207.5 C-148.5 204.1 -148.9 200.9 -149.4 197.1 C-149.7 196.8 -150 196.5 -150.4 196.1 C-150.7 194.3 -150.9 192.5 -151.1 190.7 C-151.4 189.1 -151.4 189.1 -152.4 188.1 C-152.7 185.3 -152.9 182.5 -153.1 179.6 C-153.4 177.1 -153.4 177.1 -154.4 176.1 C-154.5 174.6 -154.5 174.6 -154.5 172.6 C-154.5 171.8 -154.5 171 -154.5 170.3 C-154.5 169.4 -154.5 168.6 -154.5 167.8 C-154.5 166.9 -154.5 166.1 -154.5 165.2 C-154.5 163.4 -154.5 161.7 -154.5 159.9 C-154.5 157.2 -154.5 154.4 -154.5 151.7 C-154.5 150 -154.5 148.2 -154.5 146.5 C-154.5 146.1 -154.5 146.1 -154.5 144 C-154.5 143.3 -154.5 142.5 -154.5 141.7 C-154.5 141.1 -154.5 140.4 -154.5 139.7 C-154.4 138.1 -154.4 138.1 -153.4 137.1 C-153.1 135.3 -153 133.5 -152.9 131.6 C-152.5 126.2 -152.5 126.2 -151.4 125.1 C-151.2 124 -151 122.8 -150.9 121.6 C-150.5 118.2 -150.5 118.2 -149.4 117.1 C-149.3 116.7 -149.3 116.7 -149 114.2 C-148.4 109.2 -146.3 104.8 -144.4 100.1 C-144.1 99.3 -143.8 98.6 -143.4 97.7 C-139.8 88.1 -135.1 78.9 -128.6 70.8 C-127.4 69.1 -127.4 69.1 -125.7 66.3 C-124.4 64.2 -123.1 62.9 -121.4 61.1 C-120.9 60.4 -120.5 59.6 -120 58.8 C-118.2 56 -116.3 53.8 -113.9 51.4 C-113.4 51 -113 50.5 -112.6 50.1 C-111.7 49.2 -110.8 48.3 -109.9 47.4 C-108.5 46 -107.1 44.6 -105.8 43.3 C-104.9 42.4 -104 41.5 -103.1 40.6 C-102.3 39.8 -101.5 39 -100.7 38.2 C-98.4 36.2 -96.1 34.7 -93.4 33.1 C-92.9 32.6 -92.4 32.1 -91.9 31.6 C-89.9 29.7 -87.7 28.5 -85.4 27.1 C-84.5 26.5 -83.6 25.9 -82.7 25.3 C-79 22.8 -75 20.7 -71 18.6 C-70.3 18.2 -69.6 17.8 -68.9 17.4 C-64.5 15.1 -60.1 13.3 -55.4 11.8 C-53.4 11.2 -51.6 10.4 -49.7 9.5 C-46.8 8.2 -44.2 7.8 -41.1 7.5 C-39.2 7.1 -37.8 6.5 -36.1 5.6 C-32.1 3.7 -28 3.6 -23.6 3.4 C-21.4 3.1 -21.4 3.1 -20.4 2.1 C-17.1 1.9 -13.9 1.7 -10.7 1.5 C-6.7 1.3 -3.9 0 0 0 Z " transform="translate(1826.4,147.9)"/>
+<path d="M0 0 C0.3 -0 0.3 -0 1.7 -0 C3 -0 4.2 -0 5.4 0 C7.2 0 9.1 0 11 -0 C12.1 -0 13.3 -0 14.5 0 C15.6 0 16.7 0 17.8 0 C20.2 0.1 20.2 0.1 21.2 1.1 C22.5 1.3 23.8 1.4 25 1.4 C25.8 1.5 26.6 1.5 27.3 1.5 C28.1 1.6 28.9 1.6 29.8 1.6 C31.3 1.7 32.9 1.8 34.5 1.9 C35.2 1.9 35.9 1.9 36.6 1.9 C38.2 2.1 38.2 2.1 39.2 3.1 C40.7 3.3 42.2 3.5 43.8 3.6 C48.1 4 48.1 4 49.2 5.1 C50.4 5.3 51.6 5.5 52.8 5.6 C56.1 6 56.1 6 57.2 7.1 C58.3 7.3 59.4 7.4 60.5 7.5 C64.1 8 66.2 9.2 69.2 11.1 C71.4 11.9 73.6 12.6 75.8 13.3 C81.8 15.3 87.6 17.4 92.7 21.1 C94.6 22.4 96.6 23.4 98.6 24.5 C102.4 26.6 105.8 28.9 109.2 31.5 C110.5 32.5 111.8 33.5 113.1 34.4 C118.6 38.4 123.3 42.9 128.1 47.7 C128.8 48.4 129.6 49.2 130.3 49.9 C131.1 50.7 131.8 51.4 132.5 52.1 C133.2 52.8 133.8 53.4 134.5 54.1 C136.4 56.3 137.8 58.6 139.2 61.1 C140.5 62.5 140.5 62.5 141.8 63.6 C144.1 65.9 145.7 68.2 147.2 71.1 C152.1 80.1 152.1 80.1 154.3 83.2 C158.1 88.7 160.5 94.6 162.5 101 C163.2 103 164 104.8 164.9 106.8 C166.4 110.2 166.8 113.4 167.2 117.1 C167.6 117.5 167.9 117.8 168.2 118.1 C168.6 120.5 168.8 122.8 169 125.1 C169.2 127.1 169.2 127.1 170.2 128.1 C170.5 130.9 170.7 133.7 170.9 136.5 C171.2 141 171.2 141 172.2 142.1 C172.3 144 172.4 146 172.4 147.9 C172.4 148.2 172.4 148.2 172.4 149.6 C172.4 150.8 172.4 152 172.4 153.3 C172.4 155.1 172.4 157 172.4 158.9 C172.4 160 172.4 161.2 172.4 162.4 C172.4 163.5 172.4 164.5 172.4 165.6 C172.2 168.1 172.2 168.1 171.2 169.1 C171 171.6 170.9 174.1 170.8 176.6 C170.4 184 170.4 184 169.2 185.1 C169 186.6 168.9 188.1 168.8 189.6 C168.4 194 168.4 194 167.2 195.1 C167.1 196.2 167 197.2 166.9 198.3 C166.4 201.6 165.5 204.2 164.1 207.2 C163.2 209.2 162.6 211.2 161.9 213.3 C160.3 218.1 158.2 222.4 155.8 226.9 C155.4 227.6 155 228.3 154.6 229.1 C152.6 232.8 150.5 236.5 148.2 240.1 C147.9 240.7 147.6 241.2 147.3 241.8 C145.6 244.3 143.9 246.6 141.7 248.7 C139.2 251.1 139.2 251.1 137.9 253.5 C136 256.5 133.8 258.9 131.3 261.3 C130.8 261.8 130.4 262.3 129.9 262.8 C128.9 263.8 127.9 264.8 126.9 265.7 C125.4 267.3 123.9 268.8 122.4 270.3 C121.4 271.3 120.4 272.2 119.4 273.2 C119 273.7 118.6 274.1 118.1 274.6 C115.4 277.3 112.6 279.2 109.2 281.1 C108.8 281.6 108.3 282.1 107.8 282.6 C102.2 288.2 93.3 291.4 86.4 295 C84.5 296 82.7 297 80.9 297.9 C75.1 301 69.6 303.1 63.3 304.6 C61.2 305.1 61.2 305.1 60.2 306.1 C58.5 306.4 56.7 306.6 54.8 306.9 C53.2 307.1 53.2 307.1 52.2 308.1 C50.5 308.4 48.7 308.6 46.8 308.9 C45.2 309.1 45.2 309.1 44.2 310.1 C41.4 310.5 38.6 310.6 35.7 310.9 C33.2 311.1 33.2 311.1 32.2 312.1 C30.7 312.2 29.1 312.3 27.6 312.3 C26.6 312.3 25.6 312.3 24.5 312.3 C23.5 312.3 22.4 312.3 21.2 312.3 C20.7 312.3 20.7 312.3 17.9 312.3 C15.6 312.3 13.2 312.3 10.9 312.3 C7.9 312.3 4.8 312.3 1.8 312.3 C-1 312.3 -3.9 312.3 -6.8 312.3 C-7.8 312.3 -8.9 312.3 -10 312.3 C-11 312.3 -12 312.3 -13.1 312.3 C-13.9 312.3 -14.8 312.3 -15.7 312.3 C-17.8 312.1 -17.8 312.1 -18.8 311.1 C-20.6 310.9 -22.4 310.8 -24.2 310.6 C-29.6 310.2 -29.6 310.2 -30.8 309.1 C-31.9 308.9 -33.1 308.8 -34.2 308.6 C-37.6 308.2 -37.6 308.2 -38.8 307.1 C-39.8 307 -40.8 306.9 -41.9 306.8 C-45.2 306.3 -47.8 305.3 -50.9 303.9 C-52.9 303.1 -55 302.4 -57.1 301.7 C-70.6 297.3 -70.6 297.3 -76.2 293.2 C-78.1 291.9 -80.1 290.8 -82.1 289.8 C-86.7 287.3 -90.7 284.3 -94.8 281.1 C-96.2 280.1 -97.6 279 -99 278 C-101.8 275.9 -104.3 273.6 -106.8 271.1 C-107.5 270.7 -108.3 270.3 -109.1 269.9 C-112.3 267.8 -114 265.3 -116.2 262.2 C-117.7 260.2 -119.2 258.6 -120.9 256.9 C-123.4 254.6 -125 252.1 -126.8 249.1 C-127 248.9 -127 248.9 -128.2 247.6 C-130.2 245.7 -131.4 243.5 -132.8 241.1 C-133 240.7 -133 240.7 -134.6 238.5 C-140.5 229.6 -145.9 219.9 -148.2 209.4 C-148.7 207.2 -149.4 205.4 -150.4 203.4 C-151.9 200 -152.3 196.8 -152.8 193.1 C-153.1 192.8 -153.4 192.5 -153.8 192.1 C-154.1 189.8 -154.3 187.5 -154.5 185.2 C-154.8 183.1 -154.8 183.1 -155.8 182.1 C-155.9 180.9 -156 179.6 -156 178.4 C-156.1 177.6 -156.1 176.8 -156.1 176.1 C-156.2 174.4 -156.3 172.8 -156.4 171.2 C-156.4 170.5 -156.4 169.7 -156.5 168.9 C-156.5 168.2 -156.5 167.5 -156.6 166.8 C-156.8 165.1 -156.8 165.1 -157.8 164.1 C-157.8 161.8 -157.9 159.5 -157.9 157.1 C-157.9 156.5 -157.9 155.8 -157.9 155.1 C-157.9 150.3 -157.9 150.3 -156.8 149.1 C-156.6 147.9 -156.5 146.6 -156.5 145.4 C-156.4 144.6 -156.4 143.8 -156.4 143.1 C-156.3 142.3 -156.3 141.5 -156.2 140.6 C-156.2 139.1 -156.1 137.5 -156 135.9 C-156 135.2 -156 134.5 -155.9 133.8 C-155.8 132.1 -155.8 132.1 -154.8 131.1 C-154.5 129.3 -154.4 127.5 -154.2 125.6 C-153.9 120.2 -153.9 120.2 -152.8 119.1 C-152.7 118.6 -152.7 118.6 -152.4 116.2 C-151.8 111.2 -149.7 106.8 -147.8 102.1 C-147.5 101.3 -147.2 100.5 -146.8 99.7 C-145 94.8 -142.8 90.1 -140.2 85.4 C-140.1 85.1 -140.1 85.1 -139.4 83.8 C-137.4 80.1 -135.1 76.6 -132.8 73.1 C-132.2 72.2 -131.7 71.4 -131.2 70.4 C-129.9 68.3 -128.5 66.9 -126.8 65.1 C-126.3 64.3 -125.8 63.6 -125.4 62.8 C-124 60.6 -123 59.3 -121.2 57.6 C-119.6 56 -118.6 54.9 -117.4 52.8 C-113.7 46.9 -108.7 42.6 -102.8 39.1 C-101.6 38 -100.4 36.8 -99.2 35.6 C-96.6 32.9 -94.1 31 -90.8 29.1 C-89.9 28.5 -89 27.9 -88.1 27.3 C-84.4 24.8 -80.4 22.7 -76.4 20.6 C-75.7 20.3 -74.9 19.9 -74.2 19.5 C-72.1 18.4 -69.9 17.2 -67.8 16.1 C-67 15.8 -66.3 15.4 -65.6 15 C-61.9 13.1 -58.3 11.6 -54.2 10.6 C-51 9.8 -48 8.9 -45 7.5 C-41.6 5.9 -38.4 5.6 -34.8 5.1 C-34.4 4.8 -34.1 4.5 -33.8 4.1 C-31.4 3.8 -29.1 3.6 -26.8 3.4 C-24.8 3.1 -24.8 3.1 -23.8 2.1 C-22.5 2 -21.2 1.9 -20 1.9 C-19.6 1.8 -19.6 1.8 -17.7 1.7 C-16.1 1.7 -14.4 1.6 -12.8 1.5 C-12.5 1.5 -12.5 1.5 -10.5 1.4 C-9.8 1.4 -9.1 1.4 -8.4 1.3 C-5.4 1 -3.5 0 0 0 Z M-9.8 49.1 C-12.1 49.5 -14.4 49.6 -16.7 49.9 C-18.8 50.1 -18.8 50.1 -19.8 51.1 C-20.8 51.3 -21.8 51.4 -22.9 51.5 C-26.2 51.9 -28.8 52.9 -31.9 54.3 C-33.9 55.2 -36 55.9 -38.1 56.5 C-45.5 58.9 -51.8 62.9 -57.8 67.7 C-59.8 69.1 -59.8 69.1 -62.1 70.4 C-65 72.3 -67.3 74.4 -69.7 76.8 C-70.2 77.3 -70.6 77.7 -71.1 78.2 C-72 79.2 -73 80.1 -73.9 81.1 C-75.4 82.5 -76.8 83.9 -78.3 85.4 C-79.2 86.3 -80.1 87.2 -81 88.2 C-81.3 88.4 -81.3 88.4 -82.3 89.4 C-85 92.1 -86.9 94.8 -88.8 98.1 C-89.1 98.8 -89.5 99.4 -89.9 100.1 C-101.7 122 -101.7 122 -102.8 132.1 C-102.9 132.3 -102.9 132.3 -103.8 133.1 C-104 134.6 -104.1 136.1 -104.2 137.6 C-104.6 142 -104.6 142 -105.8 143.1 C-105.9 145.2 -105.9 147.2 -105.9 149.3 C-105.9 149.9 -105.9 150.6 -105.9 151.2 C-105.9 152.5 -105.9 153.8 -105.9 155.1 C-105.9 157.1 -105.9 159.1 -105.9 161.1 C-105.9 162.4 -105.9 163.7 -105.9 164.9 C-105.9 165.5 -105.9 166.2 -105.9 166.8 C-105.9 171 -105.9 171 -104.8 172.1 C-104.4 174.5 -104.2 176.8 -104 179.1 C-103.8 181.1 -103.8 181.1 -102.8 182.1 C-102.6 183.1 -102.5 184.1 -102.4 185.1 C-101.3 193.3 -97.1 200.7 -93.2 208 C-93.1 208.4 -93.1 208.4 -92.1 210.2 C-90 214.2 -88 217.1 -84.8 220.1 C-84.3 220.9 -83.9 221.6 -83.5 222.4 C-81 226.4 -77.7 229.5 -74.4 232.8 C-73.7 233.4 -73.1 234.1 -72.4 234.8 C-69 238.1 -65.9 240.9 -61.8 243.1 C-60.8 244.1 -59.8 245.1 -58.8 246.1 C-57.1 247.2 -55.4 248.2 -53.8 249.1 C-52.8 249.7 -51.8 250.3 -50.8 250.9 C-44.7 254.3 -39.1 256.9 -32.2 258.5 C-30 259.1 -28.2 259.8 -26.1 260.8 C-22.7 262.4 -19.3 262.7 -15.6 262.9 C-13.8 263.1 -13.8 263.1 -12.8 264.1 C-11.4 264.2 -10.1 264.3 -8.8 264.3 C-8.4 264.3 -8.4 264.3 -6.3 264.3 C-5.3 264.3 -4.4 264.3 -3.5 264.3 C-2.6 264.3 -1.6 264.3 -0.7 264.3 C1.3 264.3 3.2 264.3 5.2 264.3 C8.2 264.3 11.3 264.3 14.3 264.3 C16.2 264.3 18.1 264.3 20 264.3 C20.5 264.3 20.5 264.3 22.8 264.3 C23.6 264.3 24.4 264.3 25.3 264.3 C25.7 264.3 25.7 264.3 27.5 264.3 C29.2 264.1 29.2 264.1 30.2 263.1 C30.8 263.1 30.8 263.1 33.4 262.8 C36.7 262.3 39.2 261.3 42.3 259.9 C44.6 259 46.9 258.5 49.4 257.9 C58.6 255.5 67 250.5 74.4 244.6 C75.6 243.6 76.8 242.8 78 241.9 C83 238.5 87.3 234.3 91.6 230.1 C92.2 229.5 92.8 228.9 93.4 228.2 C96.6 225.1 99.1 222.1 101.2 218.1 C101.9 217.2 102.5 216.3 103.2 215.3 C109.2 206.4 114.5 196.6 116.8 186 C117.2 184.1 117.2 184.1 118.2 183.1 C118.5 181.6 118.6 180.1 118.8 178.6 C119.1 174.2 119.1 174.2 120.2 173.1 C120.4 170.5 120.4 167.8 120.4 165.2 C120.4 164.4 120.4 163.6 120.4 162.8 C120.4 161.1 120.4 159.4 120.4 157.7 C120.4 155.1 120.4 152.6 120.4 150 C120.4 148.3 120.4 146.7 120.4 145.1 C120.4 144.7 120.4 144.7 120.4 142.7 C120.4 137.2 120.4 137.2 119.2 136.1 C119.1 135.1 119 134.1 118.9 133 C118.4 129.7 117.5 127.1 116.1 124.1 C115.2 122.1 114.6 120.1 113.9 118 C112.3 113.1 110.2 108.8 107.8 104.3 C107.4 103.6 107 102.8 106.7 102.1 C104.6 98.2 102.5 95.2 99.2 92.1 C98.8 91.4 98.4 90.6 97.9 89.8 C95.7 86.2 92.9 83.5 89.9 80.5 C89.6 80.2 89.6 80.2 88.2 78.8 C85.1 75.7 82.1 73.3 78.2 71.1 C77.5 70.3 76.7 69.5 75.9 68.7 C73.4 66 70.6 64.6 67.2 63.1 C65.2 62.1 65.2 62.1 62.4 60.1 C58.9 57.6 55 56.9 50.9 55.9 C47.5 54.9 44.5 53.6 41.2 52.1 C36.8 50.4 32.8 49.8 28.1 49.4 C26.2 49.1 26.2 49.1 25.2 48.1 C22.7 48 20.3 48 17.8 48 C17 48 16.2 48 15.5 48 C13.9 48 12.3 48 10.7 48 C8.3 48 5.8 48 3.4 48 C1.8 48 0.3 48 -1.2 48 C-2 48 -2.7 48 -3.5 48 C-8.6 48 -8.6 48 -9.8 49.1 Z " transform="translate(2195.8,147.9)"/>
+<path d="M0 0 C1 -0 2 -0 3 -0 C4 -0 5.1 0 6.1 0 C6.6 0 6.6 0 9.3 -0 C10.2 -0 11.2 -0 12.2 0 C13.2 0 14.1 0 15 0 C17.1 0.1 17.1 0.1 18.1 1.1 C20.6 1.3 23.1 1.5 25.6 1.6 C33 2 33 2 34.1 3.1 C35.3 3.3 36.5 3.5 37.6 3.6 C41 4 41 4 42.1 5.1 C43.2 5.3 44.3 5.4 45.4 5.5 C48.9 6 51.1 7.2 54.1 9.1 C55.5 9.6 57 10.1 58.4 10.5 C66.7 13.2 73.3 17.8 80.1 23.1 C80.5 23.4 80.5 23.4 82.2 24.6 C88.6 29.3 94.2 34.1 98.1 41.1 C98.6 41.6 99.2 42.2 99.7 42.7 C101.4 44.4 102.2 45.9 103.1 48.1 C103.1 49.1 103.1 50.1 103.1 51.1 C108.2 50.3 110.9 46.9 114.1 43.1 C115.1 41.5 116.1 39.8 117.1 38.1 C120.4 34.3 123.8 31.7 128.1 29.1 C129.4 27.9 130.6 26.7 131.7 25.4 C135.9 21.6 141.5 19.3 146.4 16.7 C147.2 16.3 147.9 15.9 148.6 15.5 C165.6 6.5 165.6 6.5 172.9 5.6 C176.1 5.1 176.1 5.1 177.1 4.1 C178.9 3.8 180.7 3.6 182.5 3.4 C184.1 3.1 184.1 3.1 185.1 2.1 C188.3 1.9 191.5 1.7 194.8 1.5 C200 1.2 200 1.2 201.1 0.1 C202.6 0 204.1 0 205.6 0 C206.5 -0 207.4 -0 208.3 -0 C209.2 -0 210.2 0 211.1 0 C211.6 0 211.6 0 214 -0 C214.4 -0 214.4 -0 216.7 0 C217.5 0 218.3 0 219.2 0 C221.1 0.1 221.1 0.1 222.1 1.1 C224.6 1.3 227.1 1.5 229.6 1.6 C237 2 237 2 238.1 3.1 C239.5 3.3 240.9 3.4 242.2 3.5 C246 3.9 248.8 4.7 252.2 6.3 C254.5 7.3 256.8 7.8 259.2 8.4 C269.3 11 278.1 16.7 286.1 23.1 C287.5 24.2 288.9 25.2 290.3 26.2 C295.4 30 298.9 33.7 302.1 39.1 C303.3 40.4 304.6 41.6 305.8 42.7 C307.6 44.7 308.8 46.8 310.1 49.1 C310.4 49.6 310.4 49.6 311.8 52.1 C315.3 58.2 317.9 63.8 319.5 70.7 C320.1 72.9 320.8 74.7 321.8 76.8 C323.4 80.2 323.6 83.6 323.9 87.3 C324.1 89.1 324.1 89.1 325.1 90.1 C325.2 92.9 325.3 95.6 325.3 98.4 C325.3 99.3 325.3 100.2 325.3 101.1 C325.3 104 325.3 107 325.3 110 C325.3 112.1 325.3 114.2 325.3 116.3 C325.3 121.5 325.3 126.7 325.3 131.8 C325.3 136 325.3 140.2 325.3 144.4 C325.3 145 325.3 145.6 325.3 146.2 C325.3 147.4 325.3 148.6 325.3 149.8 C325.3 161.2 325.3 172.6 325.3 184 C325.2 193.7 325.3 203.5 325.3 213.3 C325.3 224.6 325.3 235.9 325.3 247.2 C325.3 248.4 325.3 249.7 325.3 250.9 C325.3 251.5 325.3 252 325.3 252.7 C325.3 256.9 325.3 261 325.3 265.2 C325.3 270.9 325.3 276.5 325.3 282.2 C325.3 284.2 325.3 286.3 325.3 288.4 C325.3 291.2 325.3 294 325.3 296.9 C325.3 297.7 325.3 298.5 325.3 299.4 C325.2 305 325.2 305 324.1 306.1 C322.6 306.2 321.1 306.3 319.6 306.3 C318.7 306.3 317.7 306.3 316.7 306.3 C315.7 306.3 314.6 306.3 313.6 306.3 C312.5 306.3 311.4 306.3 310.3 306.3 C308.1 306.3 305.8 306.3 303.6 306.3 C300.1 306.3 296.7 306.3 293.2 306.3 C291 306.3 288.9 306.3 286.7 306.3 C285.6 306.3 284.6 306.3 283.5 306.3 C282.6 306.3 281.6 306.3 280.6 306.3 C279.8 306.3 278.9 306.3 278.1 306.3 C276.1 306.1 276.1 306.1 275.1 305.1 C275 302.7 275 300.3 275 297.9 C275 297.5 275 297.5 275 295.6 C274.9 293 274.9 290.4 274.9 287.8 C274.9 285.9 274.9 284.1 274.9 282.2 C274.9 278.2 274.9 274.2 274.9 270.2 C274.8 263.9 274.8 257.6 274.8 251.3 C274.7 236.8 274.7 222.2 274.6 207.7 C274.6 194.4 274.5 181.1 274.4 167.8 C274.4 161.5 274.4 155.2 274.4 148.9 C274.4 145 274.3 141.1 274.3 137.2 C274.3 135.4 274.3 133.6 274.3 131.8 C274.3 129.3 274.3 126.9 274.3 124.4 C274.3 123.7 274.3 122.9 274.3 122.2 C274.2 117.2 274.2 117.2 273.1 116.1 C272.9 112.9 272.7 109.7 272.5 106.5 C272.2 101.2 272.2 101.2 271.1 100.1 C271 99.2 270.9 98.2 270.8 97.2 C269.8 89.8 266.5 83.1 262.1 77.1 C261.9 76.7 261.9 76.7 260.5 74.4 C258.4 71.2 255.8 68.6 253.2 65.9 C252.8 65.5 252.3 65.1 251.9 64.6 C249.2 62 246.5 60 243.1 58.1 C242.4 57.6 241.7 57.1 241 56.6 C237.3 54.7 233.5 53.8 229.5 52.8 C227.1 52.1 227.1 52.1 226.1 51.1 C225 50.9 223.8 50.8 222.6 50.6 C219.2 50.2 219.2 50.2 218.1 49.1 C215.8 49 213.4 49 211.1 49 C210.4 49 209.7 49 208.9 49 C207.4 49 205.9 49 204.4 49 C202.1 49 199.8 49 197.5 49 C196.1 49 194.6 49 193.2 49 C192.8 49 192.8 49 191.1 49 C186.2 49 186.2 49 185.1 50.1 C183.8 50.3 182.5 50.4 181.2 50.4 C175.7 51 171.2 53 166.1 55.1 C164.4 55.8 162.6 56.5 160.9 57.1 C156.2 59 152.2 61.1 148.6 64.7 C147.1 66.1 147.1 66.1 144.7 67.6 C140.1 70.3 137.8 73.6 135.1 78.1 C134.7 78.6 134.2 79 133.7 79.4 C131.6 81.7 130.4 84.1 129.1 86.9 C128.6 88 128 89 127.5 90 C125.6 94.2 124.1 98.3 123.6 102.9 C123.1 106.1 123.1 106.1 122.1 107.1 C122 109.7 122 112.2 122 114.8 C122 115.6 122 116.4 122 117.2 C121.9 119.9 121.9 122.7 121.9 125.4 C121.9 127.4 121.9 129.3 121.9 131.3 C121.9 135.5 121.9 139.7 121.9 143.9 C121.8 150.5 121.8 157.2 121.8 163.8 C121.7 173.1 121.7 182.4 121.7 191.7 C121.7 192.3 121.7 192.9 121.7 193.5 C121.7 197.7 121.6 201.9 121.6 206.1 C121.6 210.9 121.6 215.7 121.6 220.5 C121.6 221.1 121.6 221.7 121.6 222.3 C121.5 232.1 121.5 242 121.4 251.8 C121.4 258.4 121.4 265 121.4 271.7 C121.4 275.8 121.3 279.9 121.3 284 C121.3 285.9 121.3 287.8 121.3 289.7 C121.3 292.3 121.3 294.9 121.3 297.5 C121.3 297.9 121.3 297.9 121.3 299.8 C121.2 305 121.2 305 120.1 306.1 C118.5 306.2 116.9 306.3 115.3 306.3 C114.7 306.3 114.7 306.3 112.1 306.3 C111.5 306.3 111.5 306.3 108.7 306.3 C107.5 306.3 106.4 306.3 105.2 306.3 C102.8 306.3 100.3 306.3 97.9 306.3 C94.8 306.3 91.6 306.3 88.5 306.3 C85.5 306.3 82.5 306.3 79.6 306.3 C78.4 306.3 77.3 306.3 76.1 306.3 C75.1 306.3 74.1 306.3 73 306.3 C72.1 306.3 71.2 306.3 70.2 306.3 C68.1 306.1 68.1 306.1 67.1 305.1 C67 302.5 67 299.9 67 297.3 C67 296.9 67 296.9 67 294.8 C66.9 291.9 66.9 289.1 66.9 286.3 C66.9 284.3 66.9 282.3 66.9 280.3 C66.9 275.9 66.9 271.6 66.9 267.3 C66.8 260.4 66.8 253.6 66.8 246.7 C66.7 237.1 66.7 227.5 66.7 218 C66.7 217.6 66.7 217.6 66.7 216.1 C66.7 211.2 66.6 206.2 66.6 201.3 C66.6 197 66.6 192.6 66.6 188.3 C66.6 188 66.6 188 66.6 186.5 C66.5 176.3 66.5 166.2 66.4 156.1 C66.4 149.3 66.4 142.4 66.4 135.6 C66.4 131.4 66.3 127.2 66.3 122.9 C66.3 121 66.3 119 66.3 117 C66.3 114.3 66.3 111.7 66.3 109 C66.3 108.2 66.3 107.4 66.3 106.6 C66.2 101.2 66.2 101.2 65.1 100.1 C65 99.2 64.9 98.2 64.8 97.2 C63.2 85.3 56.2 74.5 47.8 66.3 C47.2 65.7 46.6 65 45.9 64.4 C40.1 58.6 34.2 55.4 26.2 53.4 C21.2 52.2 21.2 52.2 20.1 51.1 C19 50.9 17.8 50.8 16.6 50.6 C13.2 50.2 13.2 50.2 12.1 49.1 C9.8 49 7.4 49 5.1 49 C4.4 49 3.6 49 2.9 49 C1.4 49 -0.1 49 -1.6 49 C-3.9 49 -6.2 49 -8.5 49 C-9.9 49 -11.4 49 -12.8 49 C-13.2 49 -13.2 49 -14.9 49 C-19.8 49 -19.8 49 -20.9 50.1 C-22.7 50.5 -24.5 50.6 -26.3 50.9 C-27.9 51.1 -27.9 51.1 -28.9 52.1 C-29.4 52.2 -29.4 52.2 -31.8 52.4 C-39.2 53.4 -45.9 56.8 -51.9 61.1 C-52.8 61.7 -53.7 62.2 -54.6 62.8 C-58.5 65.4 -61.8 68.7 -65.1 72.1 C-65.7 72.7 -66.3 73.3 -66.9 73.9 C-70.1 77.1 -72.7 80.1 -74.9 84.1 C-75.4 84.8 -75.9 85.5 -76.4 86.3 C-78.3 90 -79.2 93.8 -80.2 97.8 C-80.9 100.1 -80.9 100.1 -81.9 101.1 C-82.1 102.3 -82.2 103.5 -82.4 104.6 C-82.8 108 -82.8 108 -83.9 109.1 C-84 111.7 -84 114.2 -84 116.7 C-84 117.5 -84 118.3 -84 119.1 C-84.1 121.8 -84.1 124.5 -84.1 127.2 C-84.1 129.2 -84.1 131.1 -84.1 133 C-84.1 137.2 -84.1 141.3 -84.1 145.5 C-84.2 152.1 -84.2 158.7 -84.2 165.2 C-84.3 174.5 -84.3 183.7 -84.3 192.9 C-84.3 193.5 -84.3 194.1 -84.3 194.7 C-84.3 198.8 -84.4 203 -84.4 207.1 C-84.4 211.9 -84.4 216.6 -84.4 221.4 C-84.4 222 -84.4 222.5 -84.4 223.1 C-84.5 232.9 -84.5 242.6 -84.6 252.3 C-84.6 258.9 -84.6 265.4 -84.6 272 C-84.6 276.1 -84.7 280.1 -84.7 284.2 C-84.7 286.1 -84.7 288 -84.7 289.9 C-84.7 292.4 -84.7 295 -84.7 297.6 C-84.7 298.3 -84.7 299.1 -84.7 299.9 C-84.8 305 -84.8 305 -85.9 306.1 C-87.4 306.2 -89 306.3 -90.6 306.3 C-91.6 306.3 -92.6 306.3 -93.6 306.3 C-94.7 306.3 -95.8 306.3 -96.9 306.3 C-98 306.3 -99.1 306.3 -100.2 306.3 C-102.6 306.3 -104.9 306.3 -107.3 306.3 C-110.3 306.3 -113.3 306.3 -116.3 306.3 C-119.2 306.3 -122 306.3 -124.9 306.3 C-126 306.3 -127 306.3 -128.2 306.3 C-129.2 306.3 -130.2 306.3 -131.2 306.3 C-132.1 306.3 -133 306.3 -133.9 306.3 C-135.9 306.1 -135.9 306.1 -136.9 305.1 C-137 303.6 -137 302 -137 300.4 C-137 299.4 -137 298.3 -137 297.3 C-137 296.1 -137 295 -137 293.8 C-137 292.6 -137 291.3 -137 290.1 C-137 286.7 -137 283.4 -137 280 C-137 276.4 -137 272.7 -137 269.1 C-137 262 -137 254.9 -137 247.8 C-137 242 -137 236.2 -137 230.4 C-137 229.6 -137 228.8 -137 227.9 C-137 226.3 -137 224.6 -137 222.9 C-137 207.3 -137 191.6 -137 176 C-137 162.5 -137 149.1 -137 135.6 C-137 120 -137 104.4 -137 88.8 C-137 87.2 -137 85.5 -137 83.8 C-137 83 -137 82.2 -137 81.4 C-137 75.6 -137 69.8 -137 64 C-137 57 -137 50 -137 42.9 C-137 39.3 -137 35.7 -137 32.1 C-137 28.9 -137 25.6 -137 22.3 C-137 20.5 -137 18.8 -137 17 C-137 16.5 -137 16.5 -137 13.9 C-137 13 -137 12.1 -137 11.2 C-136.9 9.1 -136.9 9.1 -135.9 8.1 C-134.3 8 -132.8 7.9 -131.2 7.9 C-130.2 7.9 -129.2 7.9 -128.2 7.8 C-127.1 7.8 -126 7.8 -124.9 7.8 C-123.8 7.8 -122.7 7.7 -121.5 7.7 C-119.2 7.7 -116.8 7.6 -114.5 7.6 C-111.5 7.5 -108.5 7.5 -105.5 7.4 C-102.6 7.3 -99.7 7.3 -96.9 7.2 C-95.8 7.2 -94.7 7.2 -93.6 7.1 C-92.6 7.1 -91.6 7.1 -90.6 7.1 C-89.7 7.1 -88.8 7.1 -87.9 7 C-85.9 7.1 -85.9 7.1 -84.9 8.1 C-84.7 10.5 -84.6 12.9 -84.6 15.2 C-84.5 15.9 -84.5 16.6 -84.5 17.4 C-84.4 19.7 -84.4 21.9 -84.3 24.2 C-84.3 25.7 -84.2 27.3 -84.2 28.8 C-84.1 32.6 -84 36.4 -83.9 40.1 C-82.9 39.4 -81.9 38.6 -81 37.8 C-80.4 37.3 -79.9 36.9 -79.3 36.5 C-77.9 35.1 -77.9 35.1 -76.5 32.7 C-74.1 28.8 -70.6 26.7 -66.9 24.1 C-65.5 23.1 -64.1 22 -62.7 20.9 C-59.8 18.8 -57 16.9 -53.9 15.1 C-53.2 14.7 -52.6 14.4 -51.9 13.9 C-47.2 11.3 -42.8 9.2 -37.6 7.7 C-35.9 7.1 -35.9 7.1 -34.9 6.1 C-33.1 5.8 -31.3 5.6 -29.5 5.4 C-27.9 5.1 -27.9 5.1 -26.9 4.1 C-25.1 3.8 -23.3 3.6 -21.5 3.4 C-19.9 3.1 -19.9 3.1 -18.9 2.1 C-16.1 1.9 -13.3 1.7 -10.5 1.5 C-6.6 1.3 -4 0 0 0 Z " transform="translate(2561.9,147.9) scale(1,1)"/></g></symbol>
+  <symbol id="play" viewBox="0 0 24 24"><path d="M6 3.5v17l14-8.5z"/></symbol>
+  <symbol id="mute" viewBox="0 0 24 24"><path d="M3 9v6h4l5 4V5L7 9H3zm13.5 3 2.5-2.5-1.4-1.4L15 10.6l-2.5-2.5-1.4 1.4 2.5 2.5-2.5 2.5 1.4 1.4 2.5-2.5 2.5 2.5 1.4-1.4-2.5-2.5z"/></symbol>
+  <symbol id="full" viewBox="0 0 24 24"><path d="M4 4h6v2H6v4H4V4zm10 0h6v6h-2V6h-4V4zM4 14h2v4h4v2H4v-6zm14 0h2v6h-6v-2h4v-4z"/></symbol>
+  <symbol id="more" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></symbol>
+</svg>
+
+<header class="top" id="top">
+  <div class="in">
+    <a href="#top" aria-label="ScalEcom"><svg class="wm" role="img" aria-label="scalecom"><use href="#wm"/></svg></a>
+    <a class="btn btn-sm" href="#califica" data-cta="top"><span class="t">Programează apelul</span></a>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ 1. HEADLINE + VSL + BUTON ============ -->
+<section class="hero">
+  <div class="in">
+    <div class="head">
+      <h1>Nu mai rămâi <span class="hl">niciodată</span> fără reclame.</h1>
+      <p class="lead">Reclamele tale au obosit iar contul arde. Îți instalăm sistemul care scoate reclame noi câștigătoare în 15 minute, nu în trei zile.</p>
+    </div>
+
+    <div class="vsl" id="vsl">
+      <iframe src="https://iframe.mediadelivery.net/embed/748010/6c29ccbc-b7b3-47dc-b9ff-599525e7df3c?autoplay=false&loop=false&muted=false&preload=true&responsive=true" loading="eager" title="VSL ScalEcom" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+    </div>
+
+    <div class="cta" id="hero-cta">
+      <a class="btn" href="#califica" data-cta="hero"><span class="t">Programează apelul →</span><span class="s">vezi dacă te califici</span></a>
+      <p class="cta-note">Completezi formularul de mai jos, te sunăm și stabilim apelul.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. CASE STUDY (locul logourilor la StudioFlow) ============ -->
+<section class="blk" id="rezultate">
+  <div class="in">
+    <div class="head">
+      <p class="eyebrow">Din Ads Manager-ul unui client</p>
+      <h2>314 comenzi cu doar două reclame, într-o săptămână.</h2>
+    </div>
+
+    <div class="am">
+      <img class="am-img" src="assets/ads-manager-1920.webp" srcset="assets/ads-manager-960.webp 960w, assets/ads-manager-1920.webp 1920w" sizes="(max-width: 1000px) 100vw, 960px" width="1920" height="378" loading="lazy" decoding="async" alt="Ads Manager: două reclame, 314 comenzi, ROAS 4,63, 6.053 lei cheltuiți, 28.004 lei vânzări">
+    </div>
+
+    <div class="stats">
+      <div class="stat"><span class="v">6.053 lei</span><span class="l">cheltuiți pe două reclame</span></div>
+      <div class="stat"><span class="v">28.004 lei</span><span class="l">vânzări, conform Ads Manager</span></div>
+      <div class="stat"><span class="v">4,63</span><span class="l">ROAS</span></div>
+      <div class="stat"><span class="v">19,28 lei</span><span class="l">cost per comandă</span></div>
+    </div>
+    <p class="cap">Magazin de cash on delivery din România. Două reclame făcute cu sistemul, o săptămână.</p>
+  </div>
+</section>
+
+<!-- ============ 3. VEZI DACĂ TE CALIFICI + FORMULAR ============ -->
+<section class="blk" id="califica">
+  <div class="in">
+    <div class="head">
+      <h2>Vezi dacă te califici.</h2>
+      <p class="lead">Oferta e pentru magazine care cheltuie <span class="ul">minim 5.000 € pe lună</span> pe reclame.</p>
+    </div>
+
+    <div class="card" id="formular">
+      <div class="card-body">
+        <div class="card-l">
+          <h3>Programează un apel.</h3>
+          <p>Te sunăm noi și vedem dacă te putem ajuta să-ți scalezi magazinul online.</p>
+        </div>
+        <div class="card-r">
+          <form id="lead" novalidate>
+            <div class="f-grid">
+              <div class="field"><label for="f-nume">Nume</label><input id="f-nume" name="nume" type="text" autocomplete="name" required></div>
+              <div class="field"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="+40" required pattern="[+0-9][0-9 ()./-]{8,}" title="Scrie un număr de telefon, de exemplu 0722 123 456 sau +40722123456"></div>
+            </div>
+            <div class="q">
+              <p class="q-label">Cât rulezi în reclame pe lună?</p>
+              <div class="chips">
+                <label><input type="radio" name="spend" value="sub-5k" required><span>sub 5.000 €</span></label>
+                <label><input type="radio" name="spend" value="5-20k"><span>5.000 – 20.000 €</span></label>
+                <label><input type="radio" name="spend" value="20-50k"><span>20.000 – 50.000 €</span></label>
+                <label><input type="radio" name="spend" value="50-100k"><span>50.000 – 100.000 €</span></label>
+                <label><input type="radio" name="spend" value="100k-plus"><span>peste 100.000 €</span></label>
+              </div>
+            </div>
+            <div class="f-foot">
+              <button class="btn btn-acc" type="submit" id="f-btn"><span class="t">Trimite →</span></button>
+              <p class="f-msg" id="f-msg" aria-live="polite"></p>
+            </div>
+          </form>
+          <div class="done" id="done-ok" hidden>
+            <p class="lead">Am primit. Te sunăm noi.</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. RECLAME FĂCUTE CU SISTEMUL (What We Produce) ============ -->
+<section class="blk" id="reclame">
+  <div class="in">
+    <div class="head">
+      <h2>Reclame făcute cu sistemul.</h2>
+      <p class="mut">În română, cu produse reale. Unghiurile pe care nu le puteai filma: doctorul în halat, femeia de 50 de ani care arată ca clienta ta, produsul pus la test.</p>
+    </div>
+    <div class="ads">
+      <div class="ad"><iframe src="https://iframe.mediadelivery.net/embed/748010/8761d347-4f23-48f9-8394-3673f2c5c216?autoplay=false&loop=false&muted=false&preload=true&responsive=true" loading="lazy" title="Reclama 1" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="ad"><iframe src="https://iframe.mediadelivery.net/embed/748010/7b000842-09fa-4831-9394-5e97cdd771b0?autoplay=false&loop=false&muted=false&preload=true&responsive=true" loading="lazy" title="Reclama 2" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+      <div class="ad"><iframe src="https://iframe.mediadelivery.net/embed/748010/a0b5184c-4ab4-4822-89cb-e0476b27cada?autoplay=false&loop=false&muted=false&preload=true&responsive=true" loading="lazy" title="Reclama 3" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. FAQ ============ -->
+<section class="blk" id="intrebari">
+  <div class="in">
+    <div class="head"><h2>Întrebări</h2></div>
+    <div class="faq">
+      <details><summary>Reclamele sunt destul de bune ca să le pun în cont?</summary><p class="a"><b>Da.</b> Le vezi înainte să semnezi: pe apel îți arătăm reclame făcute cu sistemul, pe produse ca ale tale. Pleacă din reclamele care au mers deja în contul tău și la concurența ta, cu produsul tău, nu cu unul inventat. Prima reclamă pe un produs nou e cea mai imperfectă. A zecea pleacă mai bine decât prima, pentru că notele tale devin reguli.</p></details>
+      <details><summary>Cu ce e diferit de tool-urile de AI pe care le-am încercat?</summary><p class="a"><b>Nu-ți reproșa: orice tool de masă dă output de masă.</b> Un tool pleacă de la ce-i scrii tu și îți dă un om generic cu un produs aproximativ. Sistemul pleacă de la ce a mers deja: reclamele tale câștigătoare și ale concurenței, analizate secundă cu secundă, cu produsul tău, din pozele lui. Și ține minte produsul tău: ce corectezi o dată rămâne regulă.</p></details>
+      <details><summary>Am editor. De ce mi-ar trebui sistemul?</summary><p class="a"><b>Ține-l.</b> Editorul montează ce ai filmat. Sistemul face ce n-ai filmat: doctorul în halat, femeia de 50 de ani care arată ca clienta ta, produsul pus la test. Și îți scoate 15 reclame într-o după-amiază, nu 2 pe săptămână.</p></details>
+      <details><summary>De ce nu-mi faceți voi reclamele?</summary><p class="a"><b>Putem, dacă n-ai timp de el.</b> Vorbim pe apel. Dar sistemul rămâne la tine: îți dă unghiuri și analiză și scoate reclame noi oricând se arde un winner, fără să aștepți după nimeni. Primele 20 le scoatem împreună ca să-l știi folosi, nu ca să depinzi de noi.</p></details>
+      <details><summary>Îmi garantați că ies winneri?</summary><p class="a"><b>Winnerii se găsesc testând, și exact asta face sistemul:</b> pleacă de la winnerii tăi și de la ce rulează la concurență, scoate unghiuri noi cu produsul tău și le testezi cât vrei. Ce garantăm în scris: în 30 de zile de la semnare ai sistemul instalat, antrenat pe produsele tale, și minim 20 de reclame video finale. Dacă nu ajungem acolo, îți dăm toți banii înapoi sau continuăm gratis până ajungem. Alegi tu.</p></details>
+      <details><summary>Cum funcționează, concret?</summary><p class="a"><b>30 de zile.</b> În prima săptămână legăm sistemul la contul tău de Meta, punem produsele tale și analizăm ce a mers la tine și la concurență. Din a doua săptămână scoatem împreună primele 20 de reclame, gata de pus în cont. Din ziua 30 sistemul e al tău: îl rulezi tu, sau continuăm noi.</p></details>
+      <details><summary>Ce vă trebuie de la mine?</summary><p class="a"><b>Trei poze bune cu produsul,</b> e singura dependență reală. Acces la contul de Meta doar pentru citire: nici tehnic nu poate cheltui un leu. Și câteva ore în prima lună, pentru corecturi și aprobări. Nu filmezi nimic. Nu scrii scripturi. Nu aștepți după nimeni.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. BUTON FINAL ============ -->
+<section class="final">
+  <div class="in cta">
+    <a class="btn" href="#califica" data-cta="final"><span class="t">Programează apelul →</span><span class="s">vezi dacă te califici</span></a>
+    <p class="cta-note">Completezi formularul, te sunăm și stabilim apelul.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <svg class="wm" role="img" aria-label="scalecom"><use href="#wm"/></svg>
+    <div class="foot-legal">
+      <div class="foot-links"><a href="#">Politica de confidențialitate</a><a href="#">Termeni</a><a href="mailto:contact@scalecom.ro">contact@scalecom.ro</a></div>
+      <p>© 2026 ScalEcom</p>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky"><a class="btn" href="#califica" data-cta="sticky"><span class="t">Programează apelul →</span></a></div>
+
+<script>
+/* ---------- CONFIG (completezi înainte de lansare) ---------- */
+var CFG = {
+  /* Meta Pixel: codul oficial e lipit în <head>, ID 1062639993067778 */
+  FORM_ENDPOINT: 'https://script.google.com/macros/s/AKfycbxUdhTSZz7ahrXuUvRtNioJrg0jVKxvBAtFBJFUx0DyRqdfNlX64RYXuqTBvH1Y0--zog/exec',  /* Google Sheet, prin Apps Script */
+};
+
+/* ---------- identitate, atribuire, comportament ---------- */
+var T0 = Date.now();
+function ls(k, v){ try { return v === undefined ? localStorage.getItem(k) : (localStorage.setItem(k, v), v); } catch(e){ return null; } }
+
+var UID = (function(){
+  var u = ls('sc_uid');
+  if (!u) { u = 'sc' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7); ls('sc_uid', u); }
+  return u;
+})();
+
+var ATRIB = (function(){
+  var q, out = {}, chei = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','u'];
+  try { q = new URLSearchParams(location.search); } catch(e){ return {}; }
+  chei.forEach(function(k){ var v = q.get(k); if (v) out[k] = v.slice(0, 120); });
+  if (Object.keys(out).length) { try { ls('sc_atrib', JSON.stringify(out)); } catch(e){} return out; }
+  try { return JSON.parse(ls('sc_atrib') || '{}'); } catch(e){ return {}; }
+})();
+
+var SCROLL_MAX = 0;
+window.addEventListener('scroll', function(){
+  var h = document.documentElement.scrollHeight - window.innerHeight;
+  if (h > 0) { var p = Math.round(window.scrollY / h * 100); if (p > SCROLL_MAX) SCROLL_MAX = p > 100 ? 100 : p; }
+}, { passive: true });
+
+var CLICURI = [];
+var VSL = { pornit: 'nu', secunde: 0, durata: 0 };
+(function(){
+  var f = document.querySelector('#vsl iframe');
+  if (!f || typeof playerjs === 'undefined') return;
+  try {
+    var pl = new playerjs.Player(f);
+    pl.on('ready', function(){
+      pl.on('play', function(){ if (VSL.pornit === 'nu') { VSL.pornit = 'da'; track('VSL_play', {}); } });
+      pl.on('timeupdate', function(d){
+        if (!d) return;
+        if (d.seconds > VSL.secunde) VSL.secunde = Math.round(d.seconds);
+        if (d.duration) VSL.durata = Math.round(d.duration);
+      });
+    });
+  } catch(e){}
+})();
+
+/* ---------- tracking ---------- */
+window.dataLayer = window.dataLayer || [];
+var STD = { Lead:1, ViewContent:1, Schedule:1, CompleteRegistration:1, Contact:1 };
+function track(ev, params){
+  params = params || {};
+  try { window.dataLayer.push(Object.assign({ event: ev }, params)); } catch(e){}
+  if (typeof fbq === 'function') { try { fbq(STD[ev] ? 'track' : 'trackCustom', ev, params); } catch(e){} }
+}
+document.querySelectorAll('[data-cta]').forEach(function(a){ a.addEventListener('click', function(){
+  var loc = a.getAttribute('data-cta'); CLICURI.push(loc); track('CTA_click', { loc: loc });
+}); });
+
+/* ---------- formular ---------- */
+(function(){
+  var form = document.getElementById('lead'); if (!form) return;
+  var btn = document.getElementById('f-btn'), msg = document.getElementById('f-msg');
+  var LABEL = btn.innerHTML;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); msg.textContent = 'Mai lipsește ceva mai sus.'; return; }
+    var data = {}; new FormData(form).forEach(function(v, k){ data[k] = v; });
+    var sub = data.spend === 'sub-5k';
+    data.tag = sub ? 'lp-sub-prag' : 'lp-calificat';
+    data.uid = UID;
+    data.trimis = new Date().toISOString();
+    data.sursa = location.href;
+    data.referrer = document.referrer || '';
+    data.usa = ATRIB.u || '';
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid'].forEach(function(k){ data[k] = ATRIB[k] || ''; });
+    data.timp_pe_pagina = Math.round((Date.now() - T0) / 1000);
+    data.vsl_pornit = VSL.pornit;
+    data.vsl_secunde = VSL.secunde;
+    data.vsl_procent = VSL.durata ? Math.round(VSL.secunde / VSL.durata * 100) : '';
+    data.scroll_max = SCROLL_MAX;
+    data.clicuri_cta = CLICURI.length;
+    data.ce_a_apasat = CLICURI.join(' · ');
+    data.device = window.innerWidth < 768 ? 'mobil' : 'desktop';
+    data.ecran = window.innerWidth + 'x' + window.innerHeight;
+    btn.disabled = true; btn.innerHTML = '<span class="t">Se trimite…</span>'; msg.textContent = '';
+    var send = CFG.FORM_ENDPOINT
+      ? fetch(CFG.FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(data) }).then(function(r){ return r.ok; }).catch(function(){ return 'orb'; })
+      : Promise.resolve(true);
+    /* Apps Script răspunde prin redirect; dacă browserul nu ne lasă să citim
+       răspunsul, cererea a ajuns oricum, deci nu arătăm eroare degeaba. */
+    send.then(function(ok){
+      if (ok === false) { btn.disabled = false; btn.innerHTML = LABEL; msg.textContent = 'Nu a mers trimiterea. Mai încearcă o dată sau scrie-ne pe WhatsApp.'; return; }
+      track(sub ? 'LeadSubPrag' : 'Lead', { spend: data.spend });
+      form.hidden = true;
+      document.getElementById('done-ok').hidden = false;
+      document.getElementById('formular').scrollIntoView({ block: 'start' });
+    });
+  });
+})();
+
+/* ---------- buton lipicios (mobil) ---------- */
+(function(){
+  var sticky = document.getElementById('sticky'), heroCta = document.getElementById('hero-cta'), formSec = document.getElementById('formular');
+  if (!sticky || !heroCta || !formSec || !('IntersectionObserver' in window)) return;
+  var heroOut = false, formIn = false;
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(en){ if (en.target === heroCta) heroOut = !en.isIntersecting; if (en.target === formSec) formIn = en.isIntersecting; });
+    sticky.classList.toggle('on', heroOut && !formIn);
+  }, { threshold: 0 });
+  io.observe(heroCta); io.observe(formSec);
+})();
+
+</script>
+</body>
+</html>
