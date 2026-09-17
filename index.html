@@ -319,7 +319,7 @@ form{display:grid;gap:18px;position:relative}
           <form id="lead" novalidate>
             <div class="f-grid">
               <div class="field"><label for="f-nume">Nume</label><input id="f-nume" name="nume" type="text" autocomplete="name" required></div>
-              <div class="field"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="+40" required pattern="[+0-9][0-9 ()./-]{8,}" title="Scrie un număr de telefon, de exemplu 0722 123 456 sau +40722123456"></div>
+              <div class="field"><label for="f-tel">Telefon</label><input id="f-tel" name="telefon" type="tel" inputmode="tel" autocomplete="tel" placeholder="+40" required pattern="[+0-9][0-9 \(\)\.\/\-]{8,}" title="Scrie un număr de telefon, de exemplu 0722 123 456 sau +40722123456"></div>
             </div>
             <div class="q">
               <p class="q-label">Cât rulezi în reclame pe lună?</p>
@@ -400,23 +400,40 @@ form{display:grid;gap:18px;position:relative}
 <div class="sticky" id="sticky"><a class="btn" href="#califica" data-cta="sticky"><span class="t">Programează apelul →</span></a></div>
 
 <script>
-/* ---------- CONFIG (completezi înainte de lansare) ---------- */
+/* ============================================================
+   TRACKING — un singur drum prin care trece tot.
+   Evenimente standard Meta pe fiecare treaptă a funnelului, fiecare cu
+   eventID unic (deduplicare cu serverul, când vine backend-ul), plus
+   totul în dataLayer (GTM/GA mai târziu) și în sheet la Lead.
+
+   Treapta                    Eveniment Meta       Tip
+   pagina se încarcă          PageView             standard (snippetul oficial din <head>)
+   pornește VSL-ul            ViewContent          standard
+   25/50/75/95% din VSL       VSL_25 … VSL_95      custom
+   30 s pe pagină, tab activ  Timp_30s             custom
+   scroll 50% / 90%           Scroll_50 / Scroll_90 custom
+   click pe orice CTA         InitiateCheckout     standard (content_name = butonul)
+   trimite formularul         Lead                 standard (toți la fel, spendul doar ca parametru)
+   ============================================================ */
+
 var CFG = {
-  /* Meta Pixel: codul oficial e lipit în <head>, ID 1062639993067778 */
-  FORM_ENDPOINT: 'https://script.google.com/macros/s/AKfycbxUdhTSZz7ahrXuUvRtNioJrg0jVKxvBAtFBJFUx0DyRqdfNlX64RYXuqTBvH1Y0--zog/exec',  /* Google Sheet, prin Apps Script */
+  /* Meta Pixel: codul oficial e în <head>, ID 1062639993067778 */
+  FORM_ENDPOINT: 'https://script.google.com/macros/s/AKfycbxUdhTSZz7ahrXuUvRtNioJrg0jVKxvBAtFBJFUx0DyRqdfNlX64RYXuqTBvH1Y0--zog/exec'
 };
 
-/* ---------- identitate, atribuire, comportament ---------- */
+/* ---------- identitate și atribuire ---------- */
 var T0 = Date.now();
 function ls(k, v){ try { return v === undefined ? localStorage.getItem(k) : (localStorage.setItem(k, v), v); } catch(e){ return null; } }
+function eid(){ return 'sc-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 10); }
 
-var UID = (function(){
+var UID = (function(){                     /* același om, aceeași valoare, cât timp nu-și șterge browserul */
   var u = ls('sc_uid');
   if (!u) { u = 'sc' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7); ls('sc_uid', u); }
   return u;
 })();
+var VIZITA = eid();                        /* o valoare nouă la fiecare încărcare a paginii */
 
-var ATRIB = (function(){
+var ATRIB = (function(){                   /* parametrii din link, prinși la prima atingere și ținuți minte */
   var q, out = {}, chei = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','u'];
   try { q = new URLSearchParams(location.search); } catch(e){ return {}; }
   chei.forEach(function(k){ var v = q.get(k); if (v) out[k] = v.slice(0, 120); });
@@ -424,13 +441,45 @@ var ATRIB = (function(){
   try { return JSON.parse(ls('sc_atrib') || '{}'); } catch(e){ return {}; }
 })();
 
+/* ---------- track(): dataLayer + Meta Pixel, cu eventID ---------- */
+window.dataLayer = window.dataLayer || [];
+var STD = { PageView:1, ViewContent:1, InitiateCheckout:1, Lead:1, Contact:1, Schedule:1, CompleteRegistration:1 };
+var PASI = [], FACUT = {};
+function odata(k, fn){ if (FACUT[k]) return; FACUT[k] = 1; fn(); }
+function ctx(extra){ return Object.assign({ usa: ATRIB.u || '', campanie: ATRIB.utm_campaign || '', reclama: ATRIB.utm_content || '' }, extra || {}); }
+function track(ev, params){
+  var id = eid(), p = ctx(params);
+  PASI.push(ev);
+  try { window.dataLayer.push(Object.assign({ event: ev, event_id: id, uid: UID, vizita: VIZITA }, p)); } catch(e){}
+  if (typeof fbq === 'function') { try { fbq(STD[ev] ? 'track' : 'trackCustom', ev, p, { eventID: id }); } catch(e){} }
+  return id;
+}
+/* PageView-ul spre Meta îl trimite snippetul oficial; aici doar îl oglindim în dataLayer */
+try { window.dataLayer.push(Object.assign({ event: 'PageView', uid: UID, vizita: VIZITA }, ctx())); } catch(e){}
+
+/* ---------- comportament: scroll, timp, CTA ---------- */
 var SCROLL_MAX = 0;
 window.addEventListener('scroll', function(){
   var h = document.documentElement.scrollHeight - window.innerHeight;
-  if (h > 0) { var p = Math.round(window.scrollY / h * 100); if (p > SCROLL_MAX) SCROLL_MAX = p > 100 ? 100 : p; }
+  if (h <= 0) return;
+  var p = Math.min(100, Math.round(window.scrollY / h * 100));
+  if (p > SCROLL_MAX) SCROLL_MAX = p;
+  if (SCROLL_MAX >= 50) odata('s50', function(){ track('Scroll_50'); });
+  if (SCROLL_MAX >= 90) odata('s90', function(){ track('Scroll_90'); });
 }, { passive: true });
 
+setTimeout(function(){ if (!document.hidden) odata('t30', function(){ track('Timp_30s'); }); }, 30000);
+
 var CLICURI = [];
+document.querySelectorAll('[data-cta]').forEach(function(a){ a.addEventListener('click', function(e){
+  var loc = a.getAttribute('data-cta'); CLICURI.push(loc);
+  track('InitiateCheckout', { content_name: loc, content_category: 'apel' });
+  /* derulăm din JS, fără să schimbăm adresa: un „#califica" în URL îl face pe pixel să numere un PageView în plus */
+  var tinta = document.getElementById('califica');
+  if (tinta && a.getAttribute('href') === '#califica') { e.preventDefault(); tinta.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+}); });
+
+/* ---------- VSL: cât vede omul din video ---------- */
 var VSL = { pornit: 'nu', secunde: 0, durata: 0 };
 (function(){
   var f = document.querySelector('#vsl iframe');
@@ -438,29 +487,20 @@ var VSL = { pornit: 'nu', secunde: 0, durata: 0 };
   try {
     var pl = new playerjs.Player(f);
     pl.on('ready', function(){
-      pl.on('play', function(){ if (VSL.pornit === 'nu') { VSL.pornit = 'da'; track('VSL_play', {}); } });
+      pl.on('play', function(){ odata('vsl_play', function(){ VSL.pornit = 'da'; track('ViewContent', { content_name: 'VSL ScalEcom', content_type: 'video' }); }); });
       pl.on('timeupdate', function(d){
         if (!d) return;
         if (d.seconds > VSL.secunde) VSL.secunde = Math.round(d.seconds);
         if (d.duration) VSL.durata = Math.round(d.duration);
+        if (!VSL.durata) return;
+        var pr = VSL.secunde / VSL.durata * 100;
+        [25, 50, 75, 95].forEach(function(q){ if (pr >= q) odata('vsl' + q, function(){ track('VSL_' + q, { content_name: 'VSL ScalEcom' }); }); });
       });
     });
   } catch(e){}
 })();
 
-/* ---------- tracking ---------- */
-window.dataLayer = window.dataLayer || [];
-var STD = { Lead:1, ViewContent:1, Schedule:1, CompleteRegistration:1, Contact:1 };
-function track(ev, params){
-  params = params || {};
-  try { window.dataLayer.push(Object.assign({ event: ev }, params)); } catch(e){}
-  if (typeof fbq === 'function') { try { fbq(STD[ev] ? 'track' : 'trackCustom', ev, params); } catch(e){} }
-}
-document.querySelectorAll('[data-cta]').forEach(function(a){ a.addEventListener('click', function(){
-  var loc = a.getAttribute('data-cta'); CLICURI.push(loc); track('CTA_click', { loc: loc });
-}); });
-
-/* ---------- formular ---------- */
+/* ---------- formular → Lead + sheet ---------- */
 (function(){
   var form = document.getElementById('lead'); if (!form) return;
   var btn = document.getElementById('f-btn'), msg = document.getElementById('f-msg');
@@ -469,9 +509,11 @@ document.querySelectorAll('[data-cta]').forEach(function(a){ a.addEventListener(
     e.preventDefault();
     if (!form.checkValidity()) { form.reportValidity(); msg.textContent = 'Mai lipsește ceva mai sus.'; return; }
     var data = {}; new FormData(form).forEach(function(v, k){ data[k] = v; });
-    var sub = data.spend === 'sub-5k';
-    data.tag = sub ? 'lp-sub-prag' : 'lp-calificat';
-    data.uid = UID;
+
+    /* Lead-ul pleacă ÎNAINTE de trimitere, ca să nu-l pierdem dacă omul închide tab-ul. Toți la fel, fără prag. */
+    var leadId = track('Lead', { content_name: 'apel', spend: data.spend });
+
+    data.uid = UID; data.vizita = VIZITA; data.event_id = leadId;
     data.trimis = new Date().toISOString();
     data.sursa = location.href;
     data.referrer = document.referrer || '';
@@ -484,17 +526,17 @@ document.querySelectorAll('[data-cta]').forEach(function(a){ a.addEventListener(
     data.scroll_max = SCROLL_MAX;
     data.clicuri_cta = CLICURI.length;
     data.ce_a_apasat = CLICURI.join(' · ');
+    data.pasi = PASI.join(' ');
     data.device = window.innerWidth < 768 ? 'mobil' : 'desktop';
     data.ecran = window.innerWidth + 'x' + window.innerHeight;
+
     btn.disabled = true; btn.innerHTML = '<span class="t">Se trimite…</span>'; msg.textContent = '';
     var send = CFG.FORM_ENDPOINT
       ? fetch(CFG.FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(data) }).then(function(r){ return r.ok; }).catch(function(){ return 'orb'; })
       : Promise.resolve(true);
-    /* Apps Script răspunde prin redirect; dacă browserul nu ne lasă să citim
-       răspunsul, cererea a ajuns oricum, deci nu arătăm eroare degeaba. */
+    /* Apps Script răspunde prin redirect; dacă browserul nu ne lasă să citim răspunsul, cererea a ajuns oricum */
     send.then(function(ok){
       if (ok === false) { btn.disabled = false; btn.innerHTML = LABEL; msg.textContent = 'Nu a mers trimiterea. Mai încearcă o dată sau scrie-ne pe WhatsApp.'; return; }
-      track(sub ? 'LeadSubPrag' : 'Lead', { spend: data.spend });
       form.hidden = true;
       document.getElementById('done-ok').hidden = false;
       document.getElementById('formular').scrollIntoView({ block: 'start' });
@@ -513,7 +555,6 @@ document.querySelectorAll('[data-cta]').forEach(function(a){ a.addEventListener(
   }, { threshold: 0 });
   io.observe(heroCta); io.observe(formSec);
 })();
-
 </script>
 </body>
 </html>
